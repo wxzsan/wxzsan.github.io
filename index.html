@@ -92,12 +92,120 @@
 <!-- Result excerpts are self-contained statements: define the object, assumptions,
      and resource/inequality before the display. An equation completes its sentence.
      Do not add unexplained shorthand labels or rely on the paragraph above. -->
+<article aria-labelledby="theme-query" class="research-group" id="query-complexity">
+<div class="group-head">
+<div>
+<h3 id="theme-query"><span data-language="en" lang="en">Quantum Query and Computational Complexity</span><span data-language="zh" lang="zh-CN">量子查询复杂度与计算复杂性</span></h3>
+<p><span data-language="en" lang="en">I enjoy the clean, elegant ideas that arise in quantum query complexity. In particular, I study algorithms and query lower bounds for simulation, ground-state preparation, and estimation. I also study the computational complexity of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">我喜欢量子查询复杂度中涌现的简洁而优美的思想。具体而言，我研究量子模拟、基态制备和估计问题的算法与查询复杂度下界，也研究估计哈密顿量谱性质的计算复杂性。</span></p>
+</div>
+</div>
+<div class="featured">
+<div class="feature-copy">
+<div class="feature-heading">
+<h4>
+<a href="https://arxiv.org/abs/2608.06094" rel="noopener noreferrer" target="_blank">Time-Dependent Hamiltonian Simulation with Optimal Query Complexity</a>
+</h4>
+</div>
+<p class="feature-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p><span data-language="en" lang="en">We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. We encode the full time-ordered evolution in a transducer and analyze catalyst-omission error using its private block. This analysis guides the choice of LCU coefficients for combining circuits with different transducer reuse counts, canceling leading error terms and yielding factorial error suppression.</span><span data-language="zh" lang="zh-CN">我们给出了 Lipschitz 连续含时哈密顿量模拟的最优查询复杂度，与不含时情形的界一致。我们将完整的时间有序演化编码进 transducer，并利用其 private block 分析省略催化态所引入的误差。该分析指引了不同 transducer 重用次数线路的 LCU 系数选择，通过消去主导误差项，实现阶乘级的误差衰减。</span></p>
+</div>
+<figure class="selected-result" aria-label="Optimal query complexity for time-dependent Hamiltonian simulation">
+  <div class="result-excerpt-body">
+    <p class="result-note result-lead"><span data-language="en" lang="en">A Lipschitz-continuous Hamiltonian \(H(t)\) on \([0,T]\) with \(\|H(t)\|\le\alpha\) can be simulated to error \(\varepsilon\) using the optimal number of queries to a time-indexed block encoding:</span><span data-language="zh" lang="zh-CN">对于定义在 \([0,T]\) 上、满足 \(\|H(t)\|\le\alpha\) 的 Lipschitz 连续哈密顿量 \(H(t)\)，将模拟误差控制在 \(\varepsilon\) 内所需的最优含时间索引块编码查询次数为：</span></p>
+    <div class="math-display" aria-label="Optimal time-dependent Hamiltonian simulation query bound">
+      \[
+      q=O\!\left(\alpha T+
+      \frac{\log(1/\varepsilon)}{\log\!\left(e+\log(1/\varepsilon)/(\alpha T)\right)}
+      \right).
+      \]
+    </div>
+  </div>
+</figure>
+</div>
+<div aria-label="Other papers in this research area" class="papers-in-area">
+<div class="papers-in-area-heading">
+<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
+</div>
+<div class="related-category">
+<h5><span data-language="en" lang="en">Simulation and ground-state preparation</span><span data-language="zh" lang="zh-CN">量子模拟与基态制备</span></h5>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2609.18757" rel="noopener noreferrer" target="_blank">Query-Optimal and Gate-Efficient Lindbladian Simulation</a>
+</h4>
+<p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Query-optimal Lindbladian simulation with polylogarithmic additional one- and two-qubit gate overhead per oracle query.</span><span data-language="zh" lang="zh-CN">实现查询复杂度最优的 Lindbladian 模拟，每次预言机查询的额外单、双量子比特门开销为多对数级。</span></p>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2609.35668" rel="noopener noreferrer" target="_blank">Optimal Query Complexity for Ground-State Preparation</a>
+</h4>
+<p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Optimal expected and worst-case Hamiltonian-query bounds for ground-state preparation, with separate bounds on initial-state preparation queries.</span><span data-language="zh" lang="zh-CN">确定基态制备在期望和最坏情况下的最优哈密顿量查询复杂度，并单独分析初态制备预言机的调用次数。</span></p>
+</li>
+</ul>
+</div>
+<div class="related-category">
+<h5><span data-language="en" lang="en">Estimation</span><span data-language="zh" lang="zh-CN">估计问题</span></h5>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2604.01519" rel="noopener noreferrer" target="_blank">DQC1-Completeness of Normalized Trace Estimation</a>
+</h4>
+<p class="other-paper-authors">Zhengfeng Ji, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Relates the approximate degree of a function to the complexity of normalized trace estimation: DQC1-completeness for log-local Hamiltonians and classical query lower bounds for sparse matrices.</span><span data-language="zh" lang="zh-CN">用函数的多项式近似度数刻画归一化迹估计的复杂性：在 log-local 哈密顿量模型中研究 DQC1 完全性，在稀疏矩阵访问模型中给出经典查询下界。</span></p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            FOCS 2026
+           </span>
+</div>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://doi.org/10.4230/LIPIcs.ICALP.2026.58" rel="noopener noreferrer" target="_blank">Quantum Multi-Level Estimation of Functionals of Discrete Distributions</a>
+</h4>
+<p class="other-paper-authors">Kean Chen, Minbo Gao, Tongyang Li, Qisheng Wang, and Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Uses non-destructive singular-value discrimination to estimate contributions from different probability scales, giving near-optimal Tsallis entropy estimation for fixed non-integer orders above one.</span><span data-language="zh" lang="zh-CN">用非破坏性奇异值判别区分不同概率尺度，逐层估计其贡献；对于大于 1 的固定非整数阶，得到近最优的 Tsallis 熵估计算法。</span></p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            ICALP 2026
+           </span>
+</div>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://doi.org/10.1109/TIT.2024.3382037" rel="noopener noreferrer" target="_blank">A Quantum Algorithm Framework for Discrete Probability Distributions with Applications to Rényi Entropy Estimation</a>
+</h4>
+<p class="other-paper-authors">Xinzhao Wang, Shengyu Zhang, and Tongyang Li.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">A framework combining QSVT, variable-time amplitude estimation, and quantum annealing, with applications to Rényi entropy estimation.</span><span data-language="zh" lang="zh-CN">结合 QSVT、变时间振幅估计与量子退火，构建离散概率分布的量子算法框架，并应用于 Rényi 熵估计。</span></p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            IEEE TIT 2024
+           </span>
+</div>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://doi.org/10.4230/LIPIcs.TQC.2024.9" rel="noopener noreferrer" target="_blank">Quantum Non-Identical Mean Estimation</a>
+</h4>
+<p class="other-paper-authors">Jiachen Hu, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Yecheng Xue, Chenyi Zhang, and Han Zhong.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Studies quantum mean estimation when samples come from different distributions with the same or nearby means. Algorithms and lower bounds depend on how often each sampling oracle can be queried.</span><span data-language="zh" lang="zh-CN">研究样本来自具有相同或相近均值的不同分布时的量子均值估计，并根据各采样预言机允许重复调用的次数，给出算法与复杂度下界。</span></p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            TQC 2024
+           </span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</article>
 <!-- BCH truncation bound is from arXiv:2603.28602v2, Theorem 7.
      Display an example of the two-level commutator structure and the bound. -->
 <article aria-labelledby="theme-resources" class="research-group" id="resource-efficiency">
 <div class="group-head">
 <div>
-<h3 id="theme-resources"><span data-language="en" lang="en">Resource-Efficient Quantum Algorithms</span><span data-language="zh" lang="zh-CN">资源高效的量子算法</span></h3>
+<h3 id="theme-resources"><span data-language="en" lang="en">End-to-End Resource-Efficient Quantum Algorithms</span><span data-language="zh" lang="zh-CN">端到端资源高效的量子算法</span></h3>
 <p><span data-language="en" lang="en">Query complexity alone can leave substantial costs in oracle implementation unaccounted for. I am interested in designing quantum algorithms with end-to-end resource efficiency, from input access to circuit implementation. My work includes efficient implementations of common input oracles and algorithms for quantum simulation and QSVT that combine simple circuits with favorable asymptotic resource costs.</span><span data-language="zh" lang="zh-CN">仅考察查询复杂度，可能忽略实现预言机本身所需的大量资源。我希望从输入访问到线路实现，贯通量子算法的整个实现链条，设计端到端资源高效的算法。我的研究包括常用输入预言机的高效实现，以及兼具简洁线路与良好渐近资源复杂度的量子模拟和 QSVT 算法。</span></p>
 </div>
 </div>
@@ -231,114 +339,6 @@
 </ul>
 </div>
 </section>
-</article>
-<article aria-labelledby="theme-query" class="research-group" id="query-complexity">
-<div class="group-head">
-<div>
-<h3 id="theme-query"><span data-language="en" lang="en">Quantum Query and Computational Complexity</span><span data-language="zh" lang="zh-CN">量子查询复杂度与计算复杂性</span></h3>
-<p><span data-language="en" lang="en">I enjoy the clean, elegant ideas that arise in quantum query complexity. In particular, I study algorithms and query lower bounds for simulation, ground-state preparation, and estimation. I also study the computational complexity of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">我喜欢量子查询复杂度中涌现的简洁而优美的思想。具体而言，我研究量子模拟、基态制备和估计问题的算法与查询复杂度下界，也研究估计哈密顿量谱性质的计算复杂性。</span></p>
-</div>
-</div>
-<div class="featured">
-<div class="feature-copy">
-<div class="feature-heading">
-<h4>
-<a href="https://arxiv.org/abs/2608.06094" rel="noopener noreferrer" target="_blank">Time-Dependent Hamiltonian Simulation with Optimal Query Complexity</a>
-</h4>
-</div>
-<p class="feature-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p><span data-language="en" lang="en">We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. We encode the full time-ordered evolution in a transducer and analyze catalyst-omission error using its private block. This analysis guides the choice of LCU coefficients for combining circuits with different transducer reuse counts, canceling leading error terms and yielding factorial error suppression.</span><span data-language="zh" lang="zh-CN">我们给出了 Lipschitz 连续含时哈密顿量模拟的最优查询复杂度，与不含时情形的界一致。我们将完整的时间有序演化编码进 transducer，并利用其 private block 分析省略催化态所引入的误差。该分析指引了不同 transducer 重用次数线路的 LCU 系数选择，通过消去主导误差项，实现阶乘级的误差衰减。</span></p>
-</div>
-<figure class="selected-result" aria-label="Optimal query complexity for time-dependent Hamiltonian simulation">
-  <div class="result-excerpt-body">
-    <p class="result-note result-lead"><span data-language="en" lang="en">A Lipschitz-continuous Hamiltonian \(H(t)\) on \([0,T]\) with \(\|H(t)\|\le\alpha\) can be simulated to error \(\varepsilon\) using the optimal number of queries to a time-indexed block encoding:</span><span data-language="zh" lang="zh-CN">对于定义在 \([0,T]\) 上、满足 \(\|H(t)\|\le\alpha\) 的 Lipschitz 连续哈密顿量 \(H(t)\)，将模拟误差控制在 \(\varepsilon\) 内所需的最优含时间索引块编码查询次数为：</span></p>
-    <div class="math-display" aria-label="Optimal time-dependent Hamiltonian simulation query bound">
-      \[
-      q=O\!\left(\alpha T+
-      \frac{\log(1/\varepsilon)}{\log\!\left(e+\log(1/\varepsilon)/(\alpha T)\right)}
-      \right).
-      \]
-    </div>
-  </div>
-</figure>
-</div>
-<div aria-label="Other papers in this research area" class="papers-in-area">
-<div class="papers-in-area-heading">
-<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
-</div>
-<div class="related-category">
-<h5><span data-language="en" lang="en">Simulation and ground-state preparation</span><span data-language="zh" lang="zh-CN">量子模拟与基态制备</span></h5>
-<ul class="other-paper-list">
-<li>
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2609.18757" rel="noopener noreferrer" target="_blank">Query-Optimal and Gate-Efficient Lindbladian Simulation</a>
-</h4>
-<p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Query-optimal Lindbladian simulation with polylogarithmic additional one- and two-qubit gate overhead per oracle query.</span><span data-language="zh" lang="zh-CN">实现查询复杂度最优的 Lindbladian 模拟，每次预言机查询的额外单、双量子比特门开销为多对数级。</span></p>
-</li>
-<li>
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2609.35668" rel="noopener noreferrer" target="_blank">Optimal Query Complexity for Ground-State Preparation</a>
-</h4>
-<p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Optimal expected and worst-case Hamiltonian-query bounds for ground-state preparation, with separate bounds on initial-state preparation queries.</span><span data-language="zh" lang="zh-CN">确定基态制备在期望和最坏情况下的最优哈密顿量查询复杂度，并单独分析初态制备预言机的调用次数。</span></p>
-</li>
-</ul>
-</div>
-<div class="related-category">
-<h5><span data-language="en" lang="en">Estimation</span><span data-language="zh" lang="zh-CN">估计问题</span></h5>
-<ul class="other-paper-list">
-<li>
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2604.01519" rel="noopener noreferrer" target="_blank">DQC1-Completeness of Normalized Trace Estimation</a>
-</h4>
-<p class="other-paper-authors">Zhengfeng Ji, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Relates the approximate degree of a function to the complexity of normalized trace estimation: DQC1-completeness for log-local Hamiltonians and classical query lower bounds for sparse matrices.</span><span data-language="zh" lang="zh-CN">用函数的多项式近似度数刻画归一化迹估计的复杂性：在 log-local 哈密顿量模型中研究 DQC1 完全性，在稀疏矩阵访问模型中给出经典查询下界。</span></p>
-<div class="other-paper-meta">
-<span class="related-venue">
-            FOCS 2026
-           </span>
-</div>
-</li>
-<li>
-<h4 class="other-paper-title">
-<a href="https://doi.org/10.4230/LIPIcs.ICALP.2026.58" rel="noopener noreferrer" target="_blank">Quantum Multi-Level Estimation of Functionals of Discrete Distributions</a>
-</h4>
-<p class="other-paper-authors">Kean Chen, Minbo Gao, Tongyang Li, Qisheng Wang, and Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Uses non-destructive singular-value discrimination to estimate contributions from different probability scales, giving near-optimal Tsallis entropy estimation for fixed non-integer orders above one.</span><span data-language="zh" lang="zh-CN">用非破坏性奇异值判别区分不同概率尺度，逐层估计其贡献；对于大于 1 的固定非整数阶，得到近最优的 Tsallis 熵估计算法。</span></p>
-<div class="other-paper-meta">
-<span class="related-venue">
-            ICALP 2026
-           </span>
-</div>
-</li>
-<li>
-<h4 class="other-paper-title">
-<a href="https://doi.org/10.1109/TIT.2024.3382037" rel="noopener noreferrer" target="_blank">A Quantum Algorithm Framework for Discrete Probability Distributions with Applications to Rényi Entropy Estimation</a>
-</h4>
-<p class="other-paper-authors">Xinzhao Wang, Shengyu Zhang, and Tongyang Li.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">A framework combining QSVT, variable-time amplitude estimation, and quantum annealing, with applications to Rényi entropy estimation.</span><span data-language="zh" lang="zh-CN">结合 QSVT、变时间振幅估计与量子退火，构建离散概率分布的量子算法框架，并应用于 Rényi 熵估计。</span></p>
-<div class="other-paper-meta">
-<span class="related-venue">
-            IEEE TIT 2024
-           </span>
-</div>
-</li>
-<li>
-<h4 class="other-paper-title">
-<a href="https://doi.org/10.4230/LIPIcs.TQC.2024.9" rel="noopener noreferrer" target="_blank">Quantum Non-Identical Mean Estimation</a>
-</h4>
-<p class="other-paper-authors">Jiachen Hu, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Yecheng Xue, Chenyi Zhang, and Han Zhong.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Studies quantum mean estimation when samples come from different distributions with the same or nearby means. Algorithms and lower bounds depend on how often each sampling oracle can be queried.</span><span data-language="zh" lang="zh-CN">研究样本来自具有相同或相近均值的不同分布时的量子均值估计，并根据各采样预言机允许重复调用的次数，给出算法与复杂度下界。</span></p>
-<div class="other-paper-meta">
-<span class="related-venue">
-            TQC 2024
-           </span>
-</div>
-</li>
-</ul>
-</div>
-</div>
 </article>
 <!-- arXiv:2509.08911v1, Theorem 14, with the loss-norm bound set to 1. -->
 <article aria-labelledby="theme-learning" class="research-group" id="learning">
