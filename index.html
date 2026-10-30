@@ -110,7 +110,7 @@
 </h4>
 </div>
 <p class="feature-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p>We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. A private-block analysis of catalyst-omission error guides an LCU of transducer-reuse circuits of different lengths, canceling leading error terms and achieving factorial error suppression.</p>
+<p>We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. We develop a new analysis of catalyst-omission error using the transducer’s private block. This analysis guides the choice of LCU coefficients for combining circuits with different transducer reuse counts, canceling leading error terms and yielding factorial error suppression.</p>
 </div>
 <figure class="selected-result" aria-label="Optimal query complexity for time-dependent Hamiltonian simulation">
   <div class="result-excerpt-body">
@@ -238,7 +238,7 @@
 </h4>
 </div>
 <p class="feature-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Shuo Zhou<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Shengyu Zhang, and Tongyang Li.</p>
-<p>We establish a general finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series. For local Lindbladians, Richardson extrapolation then gives \(\widetilde O(\sqrt N)\) Trotter steps per circuit, with only polylogarithmic precision dependence in the per-circuit gate count for observable estimation.</p>
+<p>We derive commutator-based Trotter error bounds for Lindbladian simulation, yielding \(O(\sqrt N)\) system-size scaling in the number of Trotter steps for local \(N\)-site systems. For observable estimation, Richardson extrapolation preserves this commutator scaling while making the number of steps per circuit polylogarithmic in inverse precision. To control the extrapolation remainder, we establish a finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series.</p>
 </div>
 <figure class="selected-result" aria-label="Finite-order BCH truncation bound for Lindbladian channels">
   <div class="result-excerpt-body">
@@ -309,7 +309,7 @@
 </div>
 <p class="feature-authors">Tongyang Li, Fengning Ou, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Penghui Yao, Pei Yuan, and Shengyu Zhang.</p>
 <p>
-         We prove matching \(T\)-count upper and lower bounds for sparse QROM, state preparation, and block encoding. The lower bounds hold even with adaptive measurements and classical control.
+         We prove matching \(T\)-count upper and lower bounds for sparse QROM, state preparation, and block encoding. Our upper bounds build on a multilevel hashing scheme for sparse QROM. The lower bounds hold even with adaptive measurements and classical control.
         </p>
 </div>
 <figure class="selected-result" aria-label="Optimal T-count bounds for sparse state preparation and block encoding">
