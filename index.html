@@ -69,7 +69,7 @@
 </div>
 <div class="hero-content">
 <div class="about-copy">
-<p><span data-language="en" lang="en">I work on quantum algorithms and computational complexity, particularly quantum simulation. I study both the asymptotic complexity of quantum algorithms and the resources required for their circuit implementations, including gate complexity and ancilla requirements.</span><span data-language="zh" lang="zh-CN">我的研究方向是量子算法与计算复杂性，尤其关注量子模拟。我既研究量子算法的渐近复杂度，也研究其线路实现所需的资源，包括量子门复杂度和辅助量子比特需求。</span></p>
+<p><span data-language="en" lang="en">I work on quantum algorithms and computational complexity, particularly quantum simulation, with an emphasis on query complexity and resource-efficient circuit implementations.</span><span data-language="zh" lang="zh-CN">我的研究方向是量子算法与计算复杂性，尤其关注量子模拟，重点研究查询复杂度及节省资源的线路实现。</span></p>
 <p class="visit-note"><span data-language="en" lang="en">I was a visiting scholar at UC Berkeley (July 2024–February 2025), hosted by <a href="https://lin.caltech.edu/" rel="noopener noreferrer" target="_blank">Lin Lin</a>.</span><span data-language="zh" lang="zh-CN">2024 年 7 月至 2025 年 2 月，我在加州大学伯克利分校访问，合作导师为 <a href="https://lin.caltech.edu/" rel="noopener noreferrer" target="_blank">Lin Lin</a>。</span></p>
 </div>
 <div aria-label="Contact and academic profiles" class="hero-links">
@@ -94,19 +94,26 @@
      Do not add unexplained shorthand labels or rely on the paragraph above. -->
 <!-- BCH truncation bound is from arXiv:2603.28602v2, Theorem 7.
      Display an example of the two-level commutator structure and the bound. -->
-<article aria-labelledby="theme-pf" class="research-group" id="product-formulas">
+<article aria-labelledby="theme-resources" class="research-group" id="resource-efficiency">
 <div class="group-head">
 <div>
-<h3 id="theme-pf"><span data-language="en" lang="en">Product-Formula Methods and Error Mitigation</span><span data-language="zh" lang="zh-CN">乘积公式方法与误差缓解</span></h3>
+<h3 id="theme-resources"><span data-language="en" lang="en">Resource-Efficient Quantum Algorithms</span><span data-language="zh" lang="zh-CN">资源高效的量子算法</span></h3>
+<p><span data-language="en" lang="en">Query complexity alone can leave substantial costs in oracle implementation unaccounted for. I am interested in designing quantum algorithms with end-to-end resource efficiency, from input access to circuit implementation. My work includes efficient implementations of common input oracles and algorithms for quantum simulation and QSVT that combine simple circuits with favorable asymptotic resource costs.</span><span data-language="zh" lang="zh-CN">仅考察查询复杂度，可能忽略实现预言机本身所需的大量资源。我希望从输入访问到线路实现，贯通量子算法的整个实现链条，设计端到端资源高效的算法。我的研究包括常用输入预言机的高效实现，以及兼具简洁线路与良好渐近资源复杂度的量子模拟和 QSVT 算法。</span></p>
+</div>
+</div>
+<section aria-labelledby="theme-pf" class="research-subgroup" id="product-formulas">
+<div class="group-head subgroup-head">
+<div>
+<h4 id="theme-pf"><span data-language="en" lang="en">Product-Formula Methods and Error Mitigation</span><span data-language="zh" lang="zh-CN">乘积公式方法与误差缓解</span></h4>
 <p><span data-language="en" lang="en">For quantum simulation, product formulas use simple circuits and few ancillas, and their commutator-based error bounds exploit locality. I develop compensation and extrapolation methods for Hamiltonian and Lindbladian simulation that improve precision dependence while preserving these advantages, and study how to mitigate physical noise together with Trotter error.</span><span data-language="zh" lang="zh-CN">在量子模拟中，乘积公式的线路结构简单、辅助量子比特需求少，其基于对易子的误差界还能利用局域性。我发展用于哈密顿量与 Lindbladian 模拟的补偿和外推方法，在保持这些优势的同时改善精度依赖，并研究如何同时缓解物理噪声与 Trotter 误差。</span></p>
 </div>
 </div>
 <div class="featured">
 <div class="feature-copy">
 <div class="feature-heading">
-<h4>
+<h5>
 <a href="https://arxiv.org/abs/2603.28602" rel="noopener noreferrer" target="_blank">Lindbladian Simulation with Commutator Bounds</a>
-</h4>
+</h5>
 </div>
 <p class="feature-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Shuo Zhou<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Shengyu Zhang, and Tongyang Li.</p>
 <p><span data-language="en" lang="en">We derive commutator-based Trotter error bounds for Lindbladian simulation, yielding \(O(\sqrt N)\) system-size scaling in the number of Trotter steps for local \(N\)-site systems. For observable estimation, Richardson extrapolation preserves this commutator scaling while making the number of steps per circuit polylogarithmic in inverse precision. To control the extrapolation remainder, we establish a finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">我们建立了 Lindbladian 模拟中基于对易子的 Trotter 误差界，使局域 \(N\) 格点系统的 Trotter 步数具有 \(O(\sqrt N)\) 的系统规模依赖。在可观测量估计中，Richardson 外推保留了这一对易子标度，并使每条线路的步数仅以多对数方式依赖于精度的倒数。为控制外推余项，我们建立了基于双重右嵌套对易子的有限阶 BCH 截断界，而无须假设完整 BCH 级数收敛。</span></p>
@@ -127,38 +134,109 @@
 </div>
 <div aria-label="Other papers in this research area" class="papers-in-area">
 <div class="papers-in-area-heading">
-<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
+<h5><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h5>
 </div>
 <ul class="other-paper-list">
 <li>
-<h4 class="other-paper-title">
+<h5 class="other-paper-title">
 <a href="https://arxiv.org/abs/2607.11856" rel="noopener noreferrer" target="_blank">Trotter Error Compensation with Polylogarithmic Precision and Nested-Commutator Scaling without Ancillas</a>
-</h4>
+</h5>
 <p class="other-paper-authors">Xinzhao Wang, Shuo Zhou, Ziruo Wang, Pei Zeng, Jinzhao Sun, Qi Zhao, Tom Gur, and Tongyang Li.</p>
 <p class="other-paper-note"><span data-language="en" lang="en">For local Hamiltonians, high-order channel compensation improves the evolution-time and system-size scaling of a \(K\)-th-order product formula to that of order \(2K+1\), with polylogarithmic precision dependence per circuit and no ancillas.</span><span data-language="zh" lang="zh-CN">对于局域哈密顿量，高阶信道补偿使 \(K\) 阶乘积公式在演化时间和系统规模上的复杂度标度达到 \(2K+1\) 阶公式的水平；无须辅助量子比特，且每条线路对精度倒数仅有多对数依赖。</span></p>
 </li>
 <li>
-<h4 class="other-paper-title">
+<h5 class="other-paper-title">
 <a href="https://arxiv.org/abs/2609.11508" rel="noopener noreferrer" target="_blank">Joint Mitigation of Algorithmic and Physical Errors in Noisy Hamiltonian Simulation</a>
-</h4>
+</h5>
 <p class="other-paper-authors">Shuo Zhou<sup class="order-mark">*</sup>, Xinzhao Wang<sup class="order-mark">*</sup>, Ruiqi Zhang<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Tongyang Li, and Shengyu Zhang.</p>
 <p class="other-paper-note"><span data-language="en" lang="en">Couples physical noise strength to the Trotter step size so that Richardson extrapolation cancels leading contributions from both Trotter error and physical noise along a one-dimensional path.</span><span data-language="zh" lang="zh-CN">将物理噪声强度与 Trotter 步长关联起来，通过一维 Richardson 外推同时消去 Trotter 误差和物理噪声的主导项。</span></p>
 </li>
 <li id="qsvt-product-formulas">
-<h4 class="other-paper-title">
+<h5 class="other-paper-title">
 <a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a>
-</h4>
+</h5>
 <p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
 <p class="other-paper-note"><span data-language="en" lang="en">Implements QSVT with one ancilla and no multi-qubit controlled gates by approximating the Hamiltonian evolutions in generalized quantum signal processing with product formulas. Richardson extrapolation improves precision dependence while retaining near-optimal, commutator-sensitive gate complexity.</span><span data-language="zh" lang="zh-CN">用乘积公式近似广义量子信号处理中的哈密顿量演化，仅用一个辅助量子比特、无须多量子比特受控门即可实现 QSVT。Richardson 外推进一步改善精度依赖，并保留近最优且依赖于对易子的量子门复杂度。</span></p>
 </li>
 </ul>
 </div>
+</section>
+<section aria-labelledby="theme-circuits" class="research-subgroup" id="circuits">
+<div class="group-head subgroup-head">
+<div>
+<h4 id="theme-circuits"><span data-language="en" lang="en">Quantum Data Access and Circuit Implementation</span><span data-language="zh" lang="zh-CN">量子数据访问与线路实现</span></h4>
+<p><span data-language="en" lang="en">I use sparsity to reduce the T-gate cost of QROM, state preparation, and block encoding, and develop circuit implementations of Hamiltonian simulation and QSVT that use fewer gates and ancillas.</span><span data-language="zh" lang="zh-CN">我利用稀疏性降低 QROM、量子态制备和块编码的 \(T\) 门成本，并研究节省量子门与辅助量子比特的哈密顿量模拟和 QSVT 线路实现。</span></p>
+</div>
+</div>
+<div class="featured">
+<div class="feature-copy">
+<div class="feature-heading">
+<h5>
+<a href="https://arxiv.org/abs/2607.28260" rel="noopener noreferrer" target="_blank">Optimal T Counts under Sparsity: from QROM to State Preparation and Block Encoding</a>
+</h5>
+</div>
+<p class="feature-authors">Tongyang Li, Fengning Ou, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Penghui Yao, Pei Yuan, and Shengyu Zhang.</p>
+<p><span data-language="en" lang="en">We prove matching \(T\)-count upper and lower bounds for sparse QROM, state preparation, and block encoding. Our upper bounds build on a multilevel hashing scheme for sparse QROM. The lower bounds hold even with adaptive measurements and classical control.</span><span data-language="zh" lang="zh-CN">我们证明了稀疏 QROM、量子态制备和块编码相匹配的 \(T\) 门数量上下界。上界构造基于稀疏 QROM 的多层哈希方案。即使允许自适应测量与经典控制，下界依然成立。</span></p>
+</div>
+<figure class="selected-result" aria-label="Optimal T-count bounds for sparse state preparation and block encoding">
+  <div class="result-excerpt-body">
+    <div class="result-case">
+      <p class="result-note result-lead"><span data-language="en" lang="en">The worst-case number of \(T\) gates needed to prepare an \(n\)-qubit state with at most \(s\) nonzero computational-basis amplitudes to trace-distance error \(\varepsilon\) is</span><span data-language="zh" lang="zh-CN">将一个在计算基下至多具有 \(s\) 个非零振幅的 \(n\) 量子比特态制备至迹距离误差 \(\varepsilon\)，最坏情况下所需的 \(T\) 门数量为</span></p>
+      <div class="math-display" aria-label="Optimal T count for sparse state preparation">
+        \[
+        \Theta\!\left(
+          \min\!\left\{s,\sqrt{s\log\frac{2^{n+1}}{s}}\right\}
+          +\sqrt{s\log\frac1\varepsilon}+\log\frac1\varepsilon
+        \right).
+        \]
+      </div>
+    </div>
+    <div class="result-case">
+      <p class="result-note result-lead"><span data-language="en" lang="en">For a \(2^n\!\times 2^n\) matrix with entries bounded in magnitude by one and at most \(s\) nonzeros per row and column, the worst-case number of \(T\) gates for block encoding with normalization \(\Theta(s)\) and operator-norm error \(\varepsilon_{\mathrm{BE}}\) is</span><span data-language="zh" lang="zh-CN">对于元素绝对值至多为 1、每行每列至多有 \(s\) 个非零元素的 \(2^n\!\times 2^n\) 矩阵，实现归一化因子为 \(\Theta(s)\)、算子范数误差为 \(\varepsilon_{\mathrm{BE}}\) 的块编码，最坏情况下所需的 \(T\) 门数量为</span></p>
+      <div class="math-display" aria-label="Optimal T count for sparse matrix block encoding">
+        \[
+        \Theta\!\left(
+          \sqrt{2^ns\!\left(n+\log\frac1{\varepsilon_{\mathrm{BE}}}\right)}
+          +\log\frac1{\varepsilon_{\mathrm{BE}}}
+        \right).
+        \]
+      </div>
+    </div>
+  </div>
+</figure>
+</div>
+<div aria-label="Other papers in this research area" class="papers-in-area">
+<div class="papers-in-area-heading">
+<h5><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h5>
+</div>
+<ul class="other-paper-list">
+<li>
+<h5 class="other-paper-title">
+<a href="https://arxiv.org/abs/2608.30629" rel="noopener noreferrer" target="_blank">Gate-Efficient Implementation of Query-Optimal Time-Dependent Simulation</a>
+</h5>
+<p class="other-paper-authors">Boyang Chen, Minbo Gao, Zhengfeng Ji, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">An exact dyadic factorization of the ordered update product in the transducer’s non-oracle part reduces gate overhead while retaining optimal query complexity.</span><span data-language="zh" lang="zh-CN">对 transducer 中非预言机部分的有序更新算子乘积作精确的二分递归分解，在保持最优查询复杂度的同时降低额外量子门开销。</span></p>
+</li>
+<li>
+<h5 class="other-paper-title"><a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a></h5>
+<p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Also listed under <a href="#qsvt-product-formulas">Product-Formula Methods</a>. Its one-ancilla implementation has near-optimal, commutator-sensitive gate complexity.</span><span data-language="zh" lang="zh-CN">亦列于<a href="#qsvt-product-formulas">乘积公式方法</a>。该方法仅需一个辅助量子比特，并具有近最优且依赖于对易子的量子门复杂度。</span></p>
+</li><li>
+<h5 class="other-paper-title">
+<a href="https://arxiv.org/abs/2510.06851" rel="noopener noreferrer" target="_blank">Randomized Quantum Singular Value Transformation</a>
+</h5>
+<p class="other-paper-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Yuxin Zhang<sup class="order-mark">*</sup>, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, and Shantanav Chakraborty.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Two randomized constructions avoid explicit block encodings: importance sampling directly randomizes QSVT, while qDRIFT approximates Hamiltonian evolutions in generalized quantum signal processing. Gate complexity is independent of the number of Hamiltonian terms and quadratic in the polynomial degree.</span><span data-language="zh" lang="zh-CN">两种随机化构造分别用重要性采样直接随机化 QSVT，或在广义量子信号处理中用 qDRIFT 近似哈密顿量演化，从而避免显式块编码。量子门复杂度不依赖哈密顿量项数，并对多项式次数呈二次依赖。</span></p>
+</li>
+</ul>
+</div>
+</section>
 </article>
 <article aria-labelledby="theme-query" class="research-group" id="query-complexity">
 <div class="group-head">
 <div>
 <h3 id="theme-query"><span data-language="en" lang="en">Quantum Query and Computational Complexity</span><span data-language="zh" lang="zh-CN">量子查询复杂度与计算复杂性</span></h3>
-<p><span data-language="en" lang="en">I enjoy the clean, elegant ideas that arise in quantum query complexity. In particular, I study algorithms and query lower bounds for simulation, ground-state preparation, and estimation, including how input access and target accuracy affect their complexity. I also study the computational complexity of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">我喜欢量子查询复杂度中涌现的简洁而优美的思想。具体而言，我研究量子模拟、基态制备和估计问题的算法与查询复杂度下界，关注输入访问方式和目标精度如何影响其复杂度，也研究估计哈密顿量谱性质的计算复杂性。</span></p>
+<p><span data-language="en" lang="en">I enjoy the clean, elegant ideas that arise in quantum query complexity. In particular, I study algorithms and query lower bounds for simulation, ground-state preparation, and estimation. I also study the computational complexity of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">我喜欢量子查询复杂度中涌现的简洁而优美的思想。具体而言，我研究量子模拟、基态制备和估计问题的算法与查询复杂度下界，也研究估计哈密顿量谱性质的计算复杂性。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -262,79 +340,7 @@
 </div>
 </div>
 </article>
-<!-- GROUP 3: arXiv:2607.28260v2, Theorems 1.1 and 1.2.
-         Keep the two task labels as prose, not artificial symbols such as T_state. -->
-<article aria-labelledby="theme-circuits" class="research-group" id="circuits">
-<div class="group-head">
-<div>
-<h3 id="theme-circuits"><span data-language="en" lang="en">Gate Complexity and Quantum Data Access</span><span data-language="zh" lang="zh-CN">量子门复杂度与量子数据访问</span></h3>
-<p><span data-language="en" lang="en">I aim to combine simple quantum circuits with strong asymptotic complexity guarantees. My work includes using sparsity to reduce the T-gate cost of QROM, state preparation, and block encoding, and designing resource-efficient algorithms for Hamiltonian simulation and QSVT.</span><span data-language="zh" lang="zh-CN">我希望将简洁的量子线路与良好的渐近复杂度相结合。我的研究包括利用稀疏性降低 QROM、量子态制备和块编码的 \(T\) 门成本，以及设计节省资源的哈密顿量模拟和 QSVT 算法。</span></p>
-</div>
-</div>
-<div class="featured">
-<div class="feature-copy">
-<div class="feature-heading">
-<h4>
-<a href="https://arxiv.org/abs/2607.28260" rel="noopener noreferrer" target="_blank">Optimal T Counts under Sparsity: from QROM to State Preparation and Block Encoding</a>
-</h4>
-</div>
-<p class="feature-authors">Tongyang Li, Fengning Ou, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Penghui Yao, Pei Yuan, and Shengyu Zhang.</p>
-<p><span data-language="en" lang="en">We prove matching \(T\)-count upper and lower bounds for sparse QROM, state preparation, and block encoding. Our upper bounds build on a multilevel hashing scheme for sparse QROM. The lower bounds hold even with adaptive measurements and classical control.</span><span data-language="zh" lang="zh-CN">我们证明了稀疏 QROM、量子态制备和块编码相匹配的 \(T\) 门数量上下界。上界构造基于稀疏 QROM 的多层哈希方案。即使允许自适应测量与经典控制，下界依然成立。</span></p>
-</div>
-<figure class="selected-result" aria-label="Optimal T-count bounds for sparse state preparation and block encoding">
-  <div class="result-excerpt-body">
-    <div class="result-case">
-      <p class="result-note result-lead"><span data-language="en" lang="en">The worst-case number of \(T\) gates needed to prepare an \(n\)-qubit state with at most \(s\) nonzero computational-basis amplitudes to trace-distance error \(\varepsilon\) is</span><span data-language="zh" lang="zh-CN">将一个在计算基下至多具有 \(s\) 个非零振幅的 \(n\) 量子比特态制备至迹距离误差 \(\varepsilon\)，最坏情况下所需的 \(T\) 门数量为</span></p>
-      <div class="math-display" aria-label="Optimal T count for sparse state preparation">
-        \[
-        \Theta\!\left(
-          \min\!\left\{s,\sqrt{s\log\frac{2^{n+1}}{s}}\right\}
-          +\sqrt{s\log\frac1\varepsilon}+\log\frac1\varepsilon
-        \right).
-        \]
-      </div>
-    </div>
-    <div class="result-case">
-      <p class="result-note result-lead"><span data-language="en" lang="en">For a \(2^n\!\times 2^n\) matrix with entries bounded in magnitude by one and at most \(s\) nonzeros per row and column, the worst-case number of \(T\) gates for block encoding with normalization \(\Theta(s)\) and operator-norm error \(\varepsilon_{\mathrm{BE}}\) is</span><span data-language="zh" lang="zh-CN">对于元素绝对值至多为 1、每行每列至多有 \(s\) 个非零元素的 \(2^n\!\times 2^n\) 矩阵，实现归一化因子为 \(\Theta(s)\)、算子范数误差为 \(\varepsilon_{\mathrm{BE}}\) 的块编码，最坏情况下所需的 \(T\) 门数量为</span></p>
-      <div class="math-display" aria-label="Optimal T count for sparse matrix block encoding">
-        \[
-        \Theta\!\left(
-          \sqrt{2^ns\!\left(n+\log\frac1{\varepsilon_{\mathrm{BE}}}\right)}
-          +\log\frac1{\varepsilon_{\mathrm{BE}}}
-        \right).
-        \]
-      </div>
-    </div>
-  </div>
-</figure>
-</div>
-<div aria-label="Other papers in this research area" class="papers-in-area">
-<div class="papers-in-area-heading">
-<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
-</div>
-<ul class="other-paper-list">
-<li>
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2608.30629" rel="noopener noreferrer" target="_blank">Gate-Efficient Implementation of Query-Optimal Time-Dependent Simulation</a>
-</h4>
-<p class="other-paper-authors">Boyang Chen, Minbo Gao, Zhengfeng Ji, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">An exact dyadic factorization of the ordered update product in the transducer’s non-oracle part reduces gate overhead while retaining optimal query complexity.</span><span data-language="zh" lang="zh-CN">对 transducer 中非预言机部分的有序更新算子乘积作精确的二分递归分解，在保持最优查询复杂度的同时降低额外量子门开销。</span></p>
-</li>
-<li>
-<h4 class="other-paper-title"><a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a></h4>
-<p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Also listed under <a href="#qsvt-product-formulas">Product-Formula Methods</a>. Its one-ancilla implementation has near-optimal, commutator-sensitive gate complexity.</span><span data-language="zh" lang="zh-CN">亦列于<a href="#qsvt-product-formulas">乘积公式方法</a>。该方法仅需一个辅助量子比特，并具有近最优且依赖于对易子的量子门复杂度。</span></p>
-</li><li>
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2510.06851" rel="noopener noreferrer" target="_blank">Randomized Quantum Singular Value Transformation</a>
-</h4>
-<p class="other-paper-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Yuxin Zhang<sup class="order-mark">*</sup>, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, and Shantanav Chakraborty.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Two randomized constructions avoid explicit block encodings: importance sampling directly randomizes QSVT, while qDRIFT approximates Hamiltonian evolutions in generalized quantum signal processing. Gate complexity is independent of the number of Hamiltonian terms and quadratic in the polynomial degree.</span><span data-language="zh" lang="zh-CN">两种随机化构造分别用重要性采样直接随机化 QSVT，或在广义量子信号处理中用 qDRIFT 近似哈密顿量演化，从而避免显式块编码。量子门复杂度不依赖哈密顿量项数，并对多项式次数呈二次依赖。</span></p>
-</li>
-</ul>
-</div>
-</article>
-<!-- GROUP 4: arXiv:2509.08911v1, Theorem 14, with the loss-norm bound set to 1. -->
+<!-- arXiv:2509.08911v1, Theorem 14, with the loss-norm bound set to 1. -->
 <article aria-labelledby="theme-learning" class="research-group" id="learning">
 <div class="group-head">
 <div>
