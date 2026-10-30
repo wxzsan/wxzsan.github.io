@@ -96,7 +96,7 @@
 <div class="group-head">
 <div>
 <h3 id="theme-query"><span data-language="en" lang="en">Query Complexity and Computational Hardness</span><span data-language="zh" lang="zh-CN">查询复杂度与计算困难性</span></h3>
-<p><span data-language="en" lang="en">I design quantum algorithms and study lower bounds for simulation, ground-state preparation, and estimation, primarily in the query model. I also study the computational complexity of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">我主要在查询模型下研究量子模拟、基态制备和估计问题的算法及复杂度下界，也研究估计哈密顿量谱性质的计算复杂性。</span></p>
+<p><span data-language="en" lang="en">The cost of a quantum algorithm depends on how its input is accessed and the accuracy required. I study these dependencies for simulation, ground-state preparation, and estimation, through algorithms and query lower bounds. I also study the computational hardness of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">量子算法的资源成本取决于输入的访问方式和目标精度。我通过算法与查询复杂度下界，研究这些因素对量子模拟、基态制备和估计问题的影响，也研究估计哈密顿量谱性质的计算困难性。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -107,7 +107,7 @@
 </h4>
 </div>
 <p class="feature-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p><span data-language="en" lang="en">We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. We develop a new analysis of catalyst-omission error using the transducer’s private block. This analysis guides the choice of LCU coefficients for combining circuits with different transducer reuse counts, canceling leading error terms and yielding factorial error suppression.</span><span data-language="zh" lang="zh-CN">我们给出了 Lipschitz 连续含时哈密顿量模拟的最优查询复杂度，与不含时情形的界一致。我们利用 transducer 的 private block，对省略催化态所引入的误差提出了新的分析。该分析指引了不同 transducer 重用次数线路的 LCU 系数选择，通过消去主导误差项，实现阶乘级的误差衰减。</span></p>
+<p><span data-language="en" lang="en">We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. We encode the full time-ordered evolution in a transducer and analyze catalyst-omission error using its private block. This analysis guides the choice of LCU coefficients for combining circuits with different transducer reuse counts, canceling leading error terms and yielding factorial error suppression.</span><span data-language="zh" lang="zh-CN">我们给出了 Lipschitz 连续含时哈密顿量模拟的最优查询复杂度，与不含时情形的界一致。我们将完整的时间有序演化编码进 transducer，并利用其 private block 分析省略催化态所引入的误差。该分析指引了不同 transducer 重用次数线路的 LCU 系数选择，通过消去主导误差项，实现阶乘级的误差衰减。</span></p>
 </div>
 <figure class="selected-result" aria-label="Optimal query complexity for time-dependent Hamiltonian simulation">
   <div class="result-excerpt-body">
@@ -134,14 +134,14 @@
 <a href="https://arxiv.org/abs/2609.18757" rel="noopener noreferrer" target="_blank">Query-Optimal and Gate-Efficient Lindbladian Simulation</a>
 </h4>
 <p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Optimal query complexity for Lindbladian simulation, with gate complexity linear in the query count up to polylogarithmic factors.</span><span data-language="zh" lang="zh-CN">Lindbladian 模拟达到最优查询复杂度，量子门复杂度除多对数因子外与查询次数成正比。</span></p>
+<p class="other-paper-note"><span data-language="en" lang="en">Query-optimal Lindbladian simulation with polylogarithmic additional one- and two-qubit gate overhead per oracle query.</span><span data-language="zh" lang="zh-CN">实现查询复杂度最优的 Lindbladian 模拟，每次预言机查询的额外单、双量子比特门开销为多对数级。</span></p>
 </li>
 <li>
 <h4 class="other-paper-title">
 <a href="https://arxiv.org/abs/2609.35668" rel="noopener noreferrer" target="_blank">Optimal Query Complexity for Ground-State Preparation</a>
 </h4>
 <p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Matching query bounds for ground-state preparation, accounting separately for Hamiltonian access and initial-state preparation.</span><span data-language="zh" lang="zh-CN">给出基态制备相匹配的查询复杂度上下界，并分别计量哈密顿量访问和初态制备的查询成本。</span></p>
+<p class="other-paper-note"><span data-language="en" lang="en">Optimal expected and worst-case Hamiltonian-query bounds for ground-state preparation, with separate bounds on initial-state preparation queries.</span><span data-language="zh" lang="zh-CN">确定基态制备在期望和最坏情况下的最优哈密顿量查询复杂度，并单独分析初态制备预言机的调用次数。</span></p>
 </li>
 </ul>
 </div>
@@ -206,7 +206,7 @@
 <div class="group-head">
 <div>
 <h3 id="theme-pf"><span data-language="en" lang="en">Product-Formula Methods and Error Mitigation</span><span data-language="zh" lang="zh-CN">乘积公式方法与误差缓解</span></h3>
-<p><span data-language="en" lang="en">I study commutator-based error bounds for product formulas, and develop compensation and extrapolation methods for reducing Trotter errors and mitigating physical noise in Hamiltonian and Lindbladian simulation.</span><span data-language="zh" lang="zh-CN">我研究基于对易子的乘积公式误差界，并发展补偿与外推方法，以降低哈密顿量和 Lindbladian 模拟中的 Trotter 误差及物理噪声影响。</span></p>
+<p><span data-language="en" lang="en">Product formulas use simple circuits and few ancillas, but high accuracy can require long circuits. I develop commutator-based error bounds, compensation, and extrapolation methods to reduce these costs in Hamiltonian and Lindbladian simulation, including settings with physical noise.</span><span data-language="zh" lang="zh-CN">乘积公式的线路结构简单、辅助量子比特需求少，但高精度模拟仍可能需要很深的线路。我研究基于对易子的误差界，以及补偿和外推方法，以降低哈密顿量与 Lindbladian 模拟的线路成本，并处理物理噪声的影响。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -229,7 +229,7 @@
       \le e\,\alpha_{\mathrm{comm},q_0}.
       \]
     </div>
-    <p class="result-note"><span data-language="en" lang="en">These commutators have the form \([C_1,[C_2,\ldots,C_d]]\), where \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\). The bound does not require convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">这里的对易子形如 \([C_1,[C_2,\ldots,C_d]]\)，其中 \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\)。该界不要求完整 BCH 级数收敛。</span></p>
+    <p class="result-note"><span data-language="en" lang="en">These commutators have the form \([C_1,[C_2,\ldots,C_d]]\), where \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\). Each \(C_r\) contains \(q_r\le q_0\) generators. For local systems, this cutoff is key to controlling the factorial growth of the commutator bounds and bounding the truncation error without assuming convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">这里的对易子形如 \([C_1,[C_2,\ldots,C_d]]\)，其中 \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\)。每个 \(C_r\) 包含的生成元个数满足 \(q_r\le q_0\)。对于局域系统，这一截断限制是控制对易子界中阶乘增长的关键，从而可以在不假设完整 BCH 级数收敛的情况下控制截断误差。</span></p>
   </div>
 </figure>
 </div>
@@ -268,7 +268,7 @@
 <div class="group-head">
 <div>
 <h3 id="theme-circuits"><span data-language="en" lang="en">Gate Complexity and Quantum Data Access</span><span data-language="zh" lang="zh-CN">量子门复杂度与量子数据访问</span></h3>
-<p><span data-language="en" lang="en">I study the gate cost of loading classical data into quantum circuits, including sparse QROM, state preparation, and block encoding. I also develop gate- and ancilla-efficient implementations of Hamiltonian simulation and quantum singular value transformation.</span><span data-language="zh" lang="zh-CN">我研究将经典数据载入量子线路的量子门成本，包括稀疏 QROM、量子态制备和块编码；也研究节省量子门和辅助量子比特的哈密顿量模拟与量子奇异值变换实现方法。</span></p>
+<p><span data-language="en" lang="en">Quantum algorithms often assume coherent access to classical data, whose circuit implementation can be costly. I study how sparsity reduces the T-gate cost of QROM, state preparation, and block encoding, and develop simulation and QSVT implementations that use fewer gates and ancillas.</span><span data-language="zh" lang="zh-CN">量子算法常假设能够相干访问经典数据，而实现这种访问本身可能需要较多线路资源。我研究如何利用稀疏性降低 QROM、量子态制备和块编码的 \(T\) 门成本，也研究节省量子门与辅助量子比特的量子模拟和 QSVT 实现方法。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -339,7 +339,7 @@
 <div class="group-head">
 <div>
 <h3 id="theme-learning"><span data-language="en" lang="en">Online Learning and Equilibrium Computation</span><span data-language="zh" lang="zh-CN">在线学习与均衡计算</span></h3>
-<p><span data-language="en" lang="en">I study multiplicative-weights update (MWU) and related mirror-descent methods in matrix online learning, adaptive learning of quantum states, and quantum algorithms for correlated equilibria in general-sum games.</span><span data-language="zh" lang="zh-CN">我研究矩阵在线学习中的乘法权重更新（MWU）及相关镜像下降方法、量子态的自适应学习，以及一般和博弈中相关均衡的量子算法。</span></p>
+<p><span data-language="en" lang="en">Matrix multiplicative weights connects online prediction with equilibrium computation. I study how its guarantees can adapt to the structure of a learning instance or to changing quantum states, and develop quantum algorithms for correlated equilibria in general-sum games.</span><span data-language="zh" lang="zh-CN">矩阵乘法权重更新将在线预测与均衡计算联系起来。我研究如何让学习保证适应具体实例的结构或随时间变化的量子态，并发展求解一般和博弈中相关均衡的量子算法。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -350,7 +350,7 @@
 </h4>
 </div>
 <p class="feature-authors">Weiyuan Gong, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Zhiyu Zhang.</p>
-<p><span data-language="en" lang="en">We obtain instance-optimal regret for matrix learning from expert advice at the computational cost of standard matrix multiplicative weights. The main technical ingredient is a one-sided Jensen trace inequality for a class of potential functions.</span><span data-language="zh" lang="zh-CN">我们在保持标准矩阵乘法权重更新计算成本的同时，为矩阵专家建议学习给出了实例最优的遗憾界。核心技术是一类势函数的单侧 Jensen 迹不等式。</span></p>
+<p><span data-language="en" lang="en">We obtain instance-optimal regret for matrix learning from expert advice at the computational cost of standard matrix multiplicative weights. A one-sided Jensen trace inequality extends the potential-based analysis of matrix learning beyond the exponential potential used by standard MMWU.</span><span data-language="zh" lang="zh-CN">我们在保持标准矩阵乘法权重更新计算成本的同时，为矩阵专家建议学习给出了实例最优的遗憾界。单侧 Jensen 迹不等式将矩阵学习的势函数分析推广到标准 MMWU 所用的指数势函数之外。</span></p>
 </div>
 <figure class="selected-result" aria-label="One-sided Jensen trace inequality for Laplace-mixture potentials">
   <div class="result-excerpt-body">
