@@ -92,11 +92,73 @@
 <!-- Result excerpts are self-contained statements: define the object, assumptions,
      and resource/inequality before the display. An equation completes its sentence.
      Do not add unexplained shorthand labels or rely on the paragraph above. -->
+<!-- BCH truncation bound is from arXiv:2603.28602v2, Theorem 7.
+     Display an example of the two-level commutator structure and the bound. -->
+<article aria-labelledby="theme-pf" class="research-group" id="product-formulas">
+<div class="group-head">
+<div>
+<h3 id="theme-pf"><span data-language="en" lang="en">Product-Formula Methods and Error Mitigation</span><span data-language="zh" lang="zh-CN">乘积公式方法与误差缓解</span></h3>
+<p><span data-language="en" lang="en">For quantum simulation, product formulas use simple circuits and few ancillas, and their commutator-based error bounds exploit locality. I develop compensation and extrapolation methods for Hamiltonian and Lindbladian simulation that improve precision dependence while preserving these advantages, and study how to mitigate physical noise together with Trotter error.</span><span data-language="zh" lang="zh-CN">在量子模拟中，乘积公式的线路结构简单、辅助量子比特需求少，其基于对易子的误差界还能利用局域性。我发展用于哈密顿量与 Lindbladian 模拟的补偿和外推方法，在保持这些优势的同时改善精度依赖，并研究如何同时缓解物理噪声与 Trotter 误差。</span></p>
+</div>
+</div>
+<div class="featured">
+<div class="feature-copy">
+<div class="feature-heading">
+<h4>
+<a href="https://arxiv.org/abs/2603.28602" rel="noopener noreferrer" target="_blank">Lindbladian Simulation with Commutator Bounds</a>
+</h4>
+</div>
+<p class="feature-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Shuo Zhou<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Shengyu Zhang, and Tongyang Li.</p>
+<p><span data-language="en" lang="en">We derive commutator-based Trotter error bounds for Lindbladian simulation, yielding \(O(\sqrt N)\) system-size scaling in the number of Trotter steps for local \(N\)-site systems. For observable estimation, Richardson extrapolation preserves this commutator scaling while making the number of steps per circuit polylogarithmic in inverse precision. To control the extrapolation remainder, we establish a finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">我们建立了 Lindbladian 模拟中基于对易子的 Trotter 误差界，使局域 \(N\) 格点系统的 Trotter 步数具有 \(O(\sqrt N)\) 的系统规模依赖。在可观测量估计中，Richardson 外推保留了这一对易子标度，并使每条线路的步数仅以多对数方式依赖于精度的倒数。为控制外推余项，我们建立了基于双重右嵌套对易子的有限阶 BCH 截断界，而无须假设完整 BCH 级数收敛。</span></p>
+</div>
+<figure class="selected-result" aria-label="Finite-order BCH truncation bound for Lindbladian channels">
+  <div class="result-excerpt-body">
+    <p class="result-note result-lead"><span data-language="en" lang="en">For Lindbladian generators \(\mathcal L_1,\ldots,\mathcal L_M\), let \(\Phi_q\) denote the degree-\(q\) term in the formal BCH logarithm of \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\), and let \(\alpha_{\mathrm{comm},q_0}\) be the associated weighted sum of diamond norms of doubly right-nested commutators. When \(\alpha_{\mathrm{comm},q_0}\le1\), the order-\(q_0\) truncation satisfies</span><span data-language="zh" lang="zh-CN">对于 Lindbladian 生成元 \(\mathcal L_1,\ldots,\mathcal L_M\)，令 \(\Phi_q\) 为 \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\) 的形式 BCH 对数中 \(q\) 次项，并令 \(\alpha_{\mathrm{comm},q_0}\) 为相应双重右嵌套对易子的 diamond 范数加权和。当 \(\alpha_{\mathrm{comm},q_0}\le1\) 时，\(q_0\) 阶截断满足</span></p>
+    <div class="math-display" aria-label="BCH truncation bound in diamond norm">
+      \[
+      \left\|\exp\!\left(\sum_{q=1}^{q_0}\Phi_q\right)
+       -e^{\mathcal L_M}\cdots e^{\mathcal L_1}\right\|_{\diamond}
+      \le e\,\alpha_{\mathrm{comm},q_0}.
+      \]
+    </div>
+    <p class="result-note"><span data-language="en" lang="en">These commutators have the form \([C_1,[C_2,\ldots,C_d]]\), where \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\). Each \(C_r\) contains \(q_r\le q_0\) generators. For local systems, this cutoff is key to controlling the factorial growth of the commutator bounds and bounding the truncation error without assuming convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">这里的对易子形如 \([C_1,[C_2,\ldots,C_d]]\)，其中 \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\)。每个 \(C_r\) 包含的生成元个数满足 \(q_r\le q_0\)。对于局域系统，这一截断限制是控制对易子界中阶乘增长的关键，从而可以在不假设完整 BCH 级数收敛的情况下控制截断误差。</span></p>
+  </div>
+</figure>
+</div>
+<div aria-label="Other papers in this research area" class="papers-in-area">
+<div class="papers-in-area-heading">
+<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
+</div>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2607.11856" rel="noopener noreferrer" target="_blank">Trotter Error Compensation with Polylogarithmic Precision and Nested-Commutator Scaling without Ancillas</a>
+</h4>
+<p class="other-paper-authors">Xinzhao Wang, Shuo Zhou, Ziruo Wang, Pei Zeng, Jinzhao Sun, Qi Zhao, Tom Gur, and Tongyang Li.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">For local Hamiltonians, high-order channel compensation improves the evolution-time and system-size scaling of a \(K\)-th-order product formula to that of order \(2K+1\), with polylogarithmic precision dependence per circuit and no ancillas.</span><span data-language="zh" lang="zh-CN">对于局域哈密顿量，高阶信道补偿使 \(K\) 阶乘积公式在演化时间和系统规模上的复杂度标度达到 \(2K+1\) 阶公式的水平；无须辅助量子比特，且每条线路对精度倒数仅有多对数依赖。</span></p>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2609.11508" rel="noopener noreferrer" target="_blank">Joint Mitigation of Algorithmic and Physical Errors in Noisy Hamiltonian Simulation</a>
+</h4>
+<p class="other-paper-authors">Shuo Zhou<sup class="order-mark">*</sup>, Xinzhao Wang<sup class="order-mark">*</sup>, Ruiqi Zhang<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Tongyang Li, and Shengyu Zhang.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Couples physical noise strength to the Trotter step size so that Richardson extrapolation cancels leading contributions from both Trotter error and physical noise along a one-dimensional path.</span><span data-language="zh" lang="zh-CN">将物理噪声强度与 Trotter 步长关联起来，通过一维 Richardson 外推同时消去 Trotter 误差和物理噪声的主导项。</span></p>
+</li>
+<li id="qsvt-product-formulas">
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a>
+</h4>
+<p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Implements QSVT with one ancilla and no multi-qubit controlled gates by approximating the Hamiltonian evolutions in generalized quantum signal processing with product formulas. Richardson extrapolation improves precision dependence while retaining near-optimal, commutator-sensitive gate complexity.</span><span data-language="zh" lang="zh-CN">用乘积公式近似广义量子信号处理中的哈密顿量演化，仅用一个辅助量子比特、无须多量子比特受控门即可实现 QSVT。Richardson 外推进一步改善精度依赖，并保留近最优且依赖于对易子的量子门复杂度。</span></p>
+</li>
+</ul>
+</div>
+</article>
 <article aria-labelledby="theme-query" class="research-group" id="query-complexity">
 <div class="group-head">
 <div>
-<h3 id="theme-query"><span data-language="en" lang="en">Query Complexity and Computational Hardness</span><span data-language="zh" lang="zh-CN">查询复杂度与计算困难性</span></h3>
-<p><span data-language="en" lang="en">The cost of a quantum algorithm depends on how its input is accessed and the accuracy required. I study these dependencies for simulation, ground-state preparation, and estimation, through algorithms and query lower bounds. I also study the computational hardness of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">量子算法的资源成本取决于输入的访问方式和目标精度。我通过算法与查询复杂度下界，研究这些因素对量子模拟、基态制备和估计问题的影响，也研究估计哈密顿量谱性质的计算困难性。</span></p>
+<h3 id="theme-query"><span data-language="en" lang="en">Quantum Query and Computational Complexity</span><span data-language="zh" lang="zh-CN">量子查询复杂度与计算复杂性</span></h3>
+<p><span data-language="en" lang="en">I enjoy the clean, elegant ideas that arise in quantum query complexity. In particular, I study algorithms and query lower bounds for simulation, ground-state preparation, and estimation, including how input access and target accuracy affect their complexity. I also study the computational complexity of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">我喜欢量子查询复杂度中涌现的简洁而优美的思想。具体而言，我研究量子模拟、基态制备和估计问题的算法与查询复杂度下界，关注输入访问方式和目标精度如何影响其复杂度，也研究估计哈密顿量谱性质的计算复杂性。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -200,75 +262,13 @@
 </div>
 </div>
 </article>
-<!-- GROUP 2: BCH truncation bound is from arXiv:2603.28602v2, Theorem 7.
-     Display an example of the two-level commutator structure and the bound. -->
-<article aria-labelledby="theme-pf" class="research-group" id="product-formulas">
-<div class="group-head">
-<div>
-<h3 id="theme-pf"><span data-language="en" lang="en">Product-Formula Methods and Error Mitigation</span><span data-language="zh" lang="zh-CN">乘积公式方法与误差缓解</span></h3>
-<p><span data-language="en" lang="en">Product formulas use simple circuits and few ancillas, but high accuracy can require long circuits. I develop commutator-based error bounds, compensation, and extrapolation methods to reduce these costs in Hamiltonian and Lindbladian simulation, including settings with physical noise.</span><span data-language="zh" lang="zh-CN">乘积公式的线路结构简单、辅助量子比特需求少，但高精度模拟仍可能需要很深的线路。我研究基于对易子的误差界，以及补偿和外推方法，以降低哈密顿量与 Lindbladian 模拟的线路成本，并处理物理噪声的影响。</span></p>
-</div>
-</div>
-<div class="featured">
-<div class="feature-copy">
-<div class="feature-heading">
-<h4>
-<a href="https://arxiv.org/abs/2603.28602" rel="noopener noreferrer" target="_blank">Lindbladian Simulation with Commutator Bounds</a>
-</h4>
-</div>
-<p class="feature-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Shuo Zhou<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Shengyu Zhang, and Tongyang Li.</p>
-<p><span data-language="en" lang="en">We derive commutator-based Trotter error bounds for Lindbladian simulation, yielding \(O(\sqrt N)\) system-size scaling in the number of Trotter steps for local \(N\)-site systems. For observable estimation, Richardson extrapolation preserves this commutator scaling while making the number of steps per circuit polylogarithmic in inverse precision. To control the extrapolation remainder, we establish a finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">我们建立了 Lindbladian 模拟中基于对易子的 Trotter 误差界，使局域 \(N\) 格点系统的 Trotter 步数具有 \(O(\sqrt N)\) 的系统规模依赖。在可观测量估计中，Richardson 外推保留了这一对易子标度，并使每条线路的步数仅以多对数方式依赖于精度的倒数。为控制外推余项，我们建立了基于双重右嵌套对易子的有限阶 BCH 截断界，而无须假设完整 BCH 级数收敛。</span></p>
-</div>
-<figure class="selected-result" aria-label="Finite-order BCH truncation bound for Lindbladian channels">
-  <div class="result-excerpt-body">
-    <p class="result-note result-lead"><span data-language="en" lang="en">For Lindbladian generators \(\mathcal L_1,\ldots,\mathcal L_M\), let \(\Phi_q\) denote the degree-\(q\) term in the formal BCH logarithm of \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\), and let \(\alpha_{\mathrm{comm},q_0}\) be the associated weighted sum of diamond norms of doubly right-nested commutators. When \(\alpha_{\mathrm{comm},q_0}\le1\), the order-\(q_0\) truncation satisfies</span><span data-language="zh" lang="zh-CN">对于 Lindbladian 生成元 \(\mathcal L_1,\ldots,\mathcal L_M\)，令 \(\Phi_q\) 为 \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\) 的形式 BCH 对数中 \(q\) 次项，并令 \(\alpha_{\mathrm{comm},q_0}\) 为相应双重右嵌套对易子的 diamond 范数加权和。当 \(\alpha_{\mathrm{comm},q_0}\le1\) 时，\(q_0\) 阶截断满足</span></p>
-    <div class="math-display" aria-label="BCH truncation bound in diamond norm">
-      \[
-      \left\|\exp\!\left(\sum_{q=1}^{q_0}\Phi_q\right)
-       -e^{\mathcal L_M}\cdots e^{\mathcal L_1}\right\|_{\diamond}
-      \le e\,\alpha_{\mathrm{comm},q_0}.
-      \]
-    </div>
-    <p class="result-note"><span data-language="en" lang="en">These commutators have the form \([C_1,[C_2,\ldots,C_d]]\), where \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\). Each \(C_r\) contains \(q_r\le q_0\) generators. For local systems, this cutoff is key to controlling the factorial growth of the commutator bounds and bounding the truncation error without assuming convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">这里的对易子形如 \([C_1,[C_2,\ldots,C_d]]\)，其中 \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\)。每个 \(C_r\) 包含的生成元个数满足 \(q_r\le q_0\)。对于局域系统，这一截断限制是控制对易子界中阶乘增长的关键，从而可以在不假设完整 BCH 级数收敛的情况下控制截断误差。</span></p>
-  </div>
-</figure>
-</div>
-<div aria-label="Other papers in this research area" class="papers-in-area">
-<div class="papers-in-area-heading">
-<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
-</div>
-<ul class="other-paper-list">
-<li>
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2607.11856" rel="noopener noreferrer" target="_blank">Trotter Error Compensation with Polylogarithmic Precision and Nested-Commutator Scaling without Ancillas</a>
-</h4>
-<p class="other-paper-authors">Xinzhao Wang, Shuo Zhou, Ziruo Wang, Pei Zeng, Jinzhao Sun, Qi Zhao, Tom Gur, and Tongyang Li.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">For local Hamiltonians, high-order channel compensation improves the evolution-time and system-size scaling of a \(K\)-th-order product formula to that of order \(2K+1\), with polylogarithmic precision dependence per circuit and no ancillas.</span><span data-language="zh" lang="zh-CN">对于局域哈密顿量，高阶信道补偿使 \(K\) 阶乘积公式在演化时间和系统规模上的复杂度标度达到 \(2K+1\) 阶公式的水平；无须辅助量子比特，且每条线路对精度倒数仅有多对数依赖。</span></p>
-</li>
-<li>
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2609.11508" rel="noopener noreferrer" target="_blank">Joint Mitigation of Algorithmic and Physical Errors in Noisy Hamiltonian Simulation</a>
-</h4>
-<p class="other-paper-authors">Shuo Zhou<sup class="order-mark">*</sup>, Xinzhao Wang<sup class="order-mark">*</sup>, Ruiqi Zhang<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Tongyang Li, and Shengyu Zhang.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Couples physical noise strength to the Trotter step size so that Richardson extrapolation cancels leading contributions from both Trotter error and physical noise along a one-dimensional path.</span><span data-language="zh" lang="zh-CN">将物理噪声强度与 Trotter 步长关联起来，通过一维 Richardson 外推同时消去 Trotter 误差和物理噪声的主导项。</span></p>
-</li>
-<li id="qsvt-product-formulas">
-<h4 class="other-paper-title">
-<a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a>
-</h4>
-<p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
-<p class="other-paper-note"><span data-language="en" lang="en">Implements QSVT with one ancilla and no multi-qubit controlled gates by approximating the Hamiltonian evolutions in generalized quantum signal processing with product formulas. Richardson extrapolation improves precision dependence while retaining near-optimal, commutator-sensitive gate complexity.</span><span data-language="zh" lang="zh-CN">用乘积公式近似广义量子信号处理中的哈密顿量演化，仅用一个辅助量子比特、无须多量子比特受控门即可实现 QSVT。Richardson 外推进一步改善精度依赖，并保留近最优且依赖于对易子的量子门复杂度。</span></p>
-</li>
-</ul>
-</div>
-</article>
 <!-- GROUP 3: arXiv:2607.28260v2, Theorems 1.1 and 1.2.
          Keep the two task labels as prose, not artificial symbols such as T_state. -->
 <article aria-labelledby="theme-circuits" class="research-group" id="circuits">
 <div class="group-head">
 <div>
 <h3 id="theme-circuits"><span data-language="en" lang="en">Gate Complexity and Quantum Data Access</span><span data-language="zh" lang="zh-CN">量子门复杂度与量子数据访问</span></h3>
-<p><span data-language="en" lang="en">Quantum algorithms often assume coherent access to classical data, whose circuit implementation can be costly. I study how sparsity reduces the T-gate cost of QROM, state preparation, and block encoding, and develop simulation and QSVT implementations that use fewer gates and ancillas.</span><span data-language="zh" lang="zh-CN">量子算法常假设能够相干访问经典数据，而实现这种访问本身可能需要较多线路资源。我研究如何利用稀疏性降低 QROM、量子态制备和块编码的 \(T\) 门成本，也研究节省量子门与辅助量子比特的量子模拟和 QSVT 实现方法。</span></p>
+<p><span data-language="en" lang="en">I aim to combine simple quantum circuits with strong asymptotic complexity guarantees. My work includes using sparsity to reduce the T-gate cost of QROM, state preparation, and block encoding, and designing resource-efficient algorithms for Hamiltonian simulation and QSVT.</span><span data-language="zh" lang="zh-CN">我希望将简洁的量子线路与良好的渐近复杂度相结合。我的研究包括利用稀疏性降低 QROM、量子态制备和块编码的 \(T\) 门成本，以及设计节省资源的哈密顿量模拟和 QSVT 算法。</span></p>
 </div>
 </div>
 <div class="featured">
