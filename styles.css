@@ -204,6 +204,17 @@ mjx-container[jax="SVG"] { font-weight: 400; }
 .related-category h5 { color: var(--ink); font-family: var(--font-serif); font-size: 16px; font-weight: 400; line-height: 1.42; }
 .order-mark { font-family: var(--font-serif); color: var(--muted); font-size: .76em; line-height: 0; vertical-align: super; margin-left: 1px; white-space: nowrap; }
 
+/* Paper-specific research-process notes stay collapsed until requested. */
+.ai-disclosure { margin-top: 6px; max-width: var(--reading-width); font-size: 12.5px; }
+.ai-disclosure > summary { width: fit-content; color: var(--muted); font-family: var(--font-sans); cursor: pointer; }
+.ai-disclosure > summary::marker { font-size: .85em; }
+.ai-disclosure > summary:hover { color: var(--ink); }
+.ai-disclosure > summary [data-language] { text-decoration: underline dotted; text-underline-offset: .2em; }
+.ai-disclosure > p { margin-top: 7px; padding-left: 12px; border-left: 2px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1.6; }
+.ai-disclosure > p a { color: var(--paper-link); }
+.ai-disclosure > p a:hover { color: var(--paper-link-hover); }
+html[lang="zh-CN"] .ai-disclosure > p { line-height: 1.75; }
+
 /* Publications retain all titles, full author lists, and author-order marks. */
 .section-pubs { background: var(--surface); }
 .section-pubs .section-heading { margin-bottom: 14px; }
