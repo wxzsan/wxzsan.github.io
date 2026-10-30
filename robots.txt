@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wxzsan.github.io/sitemap.xml

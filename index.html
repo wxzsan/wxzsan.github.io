@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Xinzhao Wang — Ph.D. candidate at Peking University, working on quantum algorithms and computational complexity." name="description"/>
+<meta content="Xinzhao Wang" name="author"/>
+<meta content="#faf9f6" name="theme-color"/>
+<meta content="Xinzhao Wang" property="og:title"/>
+<meta content="Quantum algorithms, quantum simulation, and computational complexity." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://wxzsan.github.io/" property="og:url"/>
+<link href="https://wxzsan.github.io/" rel="canonical"/>
+<title>
+   Xinzhao Wang
+  </title>
+<link href="assets/jirachi-icon.png" rel="icon" type="image/png"/>
+<!-- Latin Modern for text and interface; math uses MathJax's TeX fonts. -->
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-roman.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-sans.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<script src="mathjax-config.js">
+</script>
+<script defer="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js">
+</script>
+<script defer="" src="script.js">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Xinzhao Wang, home" class="brand" href="#top"><img alt="" height="29" src="assets/jirachi-icon.png" width="29"/>
+<span>
+      Xinzhao Wang
+     </span></a>
+<button aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation menu" class="menu-button" type="button">
+<svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7">
+</path>
+</svg>
+</button>
+<nav aria-label="Main navigation" class="site-nav" id="main-nav">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#talks">Talks</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<!-- ABOUT: Edit these paragraphs and the links below. -->
+<section aria-labelledby="page-title" class="hero container" id="top">
+<div class="hero-heading" id="about">
+<p class="eyebrow">
+      Computer Science · Peking University
+     </p>
+<h1 id="page-title">
+      Xinzhao Wang
+     </h1>
+<p class="hero-role">
+      Ph.D. candidate · advised by
+      <a href="https://www.tongyangli.com/" rel="noopener noreferrer" target="_blank">Tongyang Li</a>
+</p>
+</div>
+<div class="hero-content">
+<div class="about-copy">
+<p>
+       I work on quantum algorithms and computational complexity, particularly quantum simulation. I study both the asymptotic complexity of quantum algorithms and the resources required for their circuit implementations, including gate complexity and ancilla requirements.
+      </p>
+<p class="visit-note">I was a visiting scholar at UC Berkeley (July 2024–February 2025), hosted by <a href="https://lin.caltech.edu/" rel="noopener noreferrer" target="_blank">Lin Lin</a>.</p>
+</div>
+<div aria-label="Contact and academic profiles" class="hero-links">
+<a href="mailto:wangxz@stu.pku.edu.cn">wangxz@stu.pku.edu.cn</a>
+<a href="https://scholar.google.com/citations?hl=en&amp;user=1Ey4DPoAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a>
+<a href="Xinzhao_Wang_CV.pdf" rel="noopener noreferrer" target="_blank">CV (PDF)</a>
+</div>
+<p class="postdoc-note">
+      Seeking postdoctoral positions in quantum algorithms and related areas starting in 2027.
+     </p>
+</div>
+<figure class="portrait">
+<img alt="Portrait of Xinzhao Wang" height="168" src="assets/profile.webp" width="168"/>
+</figure>
+</section>
+<section aria-labelledby="research-title" class="section section-research" id="research">
+<div class="container">
+<div class="section-heading">
+<h2 id="research-title">
+       Research
+      </h2>
+<p class="research-credit-note">† Alphabetical author order  ·  * Equal contribution</p>
+</div>
+<!-- Result excerpts are self-contained statements: define the object, assumptions,
+     and resource/inequality before the display. An equation completes its sentence.
+     Do not add unexplained shorthand labels or rely on the paragraph above. -->
+<article aria-labelledby="theme-query" class="research-group" id="query-complexity">
+<div class="group-head">
+<div>
+<h3 id="theme-query">Query Complexity and Computational Hardness</h3>
+<p>I design quantum algorithms and study lower bounds for simulation, ground-state preparation, and estimation, primarily in the query model. I also study the computational complexity of spectral problems.</p>
+</div>
+</div>
+<div class="featured">
+<div class="feature-copy">
+<div class="feature-heading">
+<h4>
+<a href="https://arxiv.org/abs/2608.06094" rel="noopener noreferrer" target="_blank">Time-Dependent Hamiltonian Simulation with Optimal Query Complexity</a>
+</h4>
+</div>
+<p class="feature-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p>We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. A private-block analysis of catalyst-omission error guides an LCU of transducer-reuse circuits of different lengths, canceling leading error terms and achieving factorial error suppression.</p>
+</div>
+<figure class="selected-result" aria-label="Optimal query complexity for time-dependent Hamiltonian simulation">
+  <div class="result-excerpt-body">
+    <p class="result-note result-lead">A Lipschitz-continuous Hamiltonian \(H(t)\) on \([0,T]\) with \(\|H(t)\|\le\alpha\) can be simulated to error \(\varepsilon\) using the optimal number of queries to a time-indexed block encoding:</p>
+    <div class="math-display" aria-label="Optimal time-dependent Hamiltonian simulation query bound">
+      \[
+      q=O\!\left(\alpha T+
+      \frac{\log(1/\varepsilon)}{\log\!\left(e+\log(1/\varepsilon)/(\alpha T)\right)}
+      \right).
+      \]
+    </div>
+  </div>
+</figure>
+</div>
+<div aria-label="Other papers in this research area" class="papers-in-area">
+<div class="papers-in-area-heading">
+<h4>
+         Other papers
+        </h4>
+</div>
+<div class="related-category">
+<h5>
+         Simulation and ground-state preparation
+        </h5>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2609.18757" rel="noopener noreferrer" target="_blank">Query-Optimal and Gate-Efficient Lindbladian Simulation</a>
+</h4>
+<p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p class="other-paper-note">
+           Optimal query complexity for Lindbladian simulation, with gate complexity linear in the query count up to polylogarithmic factors.
+          </p>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2609.35668" rel="noopener noreferrer" target="_blank">Optimal Query Complexity for Ground-State Preparation</a>
+</h4>
+<p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p class="other-paper-note">
+           Matching query bounds for ground-state preparation, accounting separately for Hamiltonian access and initial-state preparation.
+          </p>
+</li>
+</ul>
+</div>
+<div class="related-category">
+<h5>
+         Estimation
+        </h5>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2604.01519" rel="noopener noreferrer" target="_blank">DQC1-Completeness of Normalized Trace Estimation</a>
+</h4>
+<p class="other-paper-authors">Zhengfeng Ji, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
+<p class="other-paper-note">Proves DQC1-completeness for normalized trace estimation of broad classes of functions of log-local Hamiltonians, with classical query hardness governed by approximate degree.</p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            FOCS 2026
+           </span>
+</div>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://doi.org/10.4230/LIPIcs.ICALP.2026.58" rel="noopener noreferrer" target="_blank">Quantum Multi-Level Estimation of Functionals of Discrete Distributions</a>
+</h4>
+<p class="other-paper-authors">Kean Chen, Minbo Gao, Tongyang Li, Qisheng Wang, and Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>.</p>
+<p class="other-paper-note">
+           A multi-level amplitude estimation framework using non-destructive singular-value discrimination, with near-optimal algorithms for non-integer Tsallis entropy estimation.
+          </p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            ICALP 2026
+           </span>
+</div>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://doi.org/10.1109/TIT.2024.3382037" rel="noopener noreferrer" target="_blank">A Quantum Algorithm Framework for Discrete Probability Distributions with Applications to Rényi Entropy Estimation</a>
+</h4>
+<p class="other-paper-authors">Xinzhao Wang, Shengyu Zhang, and Tongyang Li.</p>
+<p class="other-paper-note">
+           A framework combining QSVT, variable-time amplitude estimation, and quantum annealing, with applications to Rényi entropy estimation.
+          </p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            IEEE TIT 2024
+           </span>
+</div>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://doi.org/10.4230/LIPIcs.TQC.2024.9" rel="noopener noreferrer" target="_blank">Quantum Non-Identical Mean Estimation</a>
+</h4>
+<p class="other-paper-authors">Jiachen Hu, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Yecheng Xue, Chenyi Zhang, and Han Zhong.</p>
+<p class="other-paper-note">
+           Quantum algorithms and lower bounds for mean estimation from non-identical quantum samples.
+          </p>
+<div class="other-paper-meta">
+<span class="related-venue">
+            TQC 2024
+           </span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- GROUP 2: BCH truncation bound is from arXiv:2603.28602v2, Theorem 7.
+     Display an example of the two-level commutator structure and the bound. -->
+<article aria-labelledby="theme-pf" class="research-group" id="product-formulas">
+<div class="group-head">
+<div>
+<h3 id="theme-pf">
+         Product-Formula Methods and Error Mitigation
+        </h3>
+<p>I study commutator-based error bounds for product formulas, and develop compensation and extrapolation methods for reducing Trotter errors and mitigating physical noise in Hamiltonian and Lindbladian simulation.</p>
+</div>
+</div>
+<div class="featured">
+<div class="feature-copy">
+<div class="feature-heading">
+<h4>
+<a href="https://arxiv.org/abs/2603.28602" rel="noopener noreferrer" target="_blank">Lindbladian Simulation with Commutator Bounds</a>
+</h4>
+</div>
+<p class="feature-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Shuo Zhou<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Shengyu Zhang, and Tongyang Li.</p>
+<p>We establish a general finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series. For local Lindbladians, Richardson extrapolation then gives \(\widetilde O(\sqrt N)\) Trotter steps per circuit, with only polylogarithmic precision dependence in the per-circuit gate count for observable estimation.</p>
+</div>
+<figure class="selected-result" aria-label="Finite-order BCH truncation bound for Lindbladian channels">
+  <div class="result-excerpt-body">
+    <p class="result-note result-lead">For Lindbladian generators \(\mathcal L_1,\ldots,\mathcal L_M\), let \(\Phi_q\) denote the degree-\(q\) term in the formal BCH logarithm of \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\), and let \(\alpha_{\mathrm{comm},q_0}\) be the associated weighted sum of diamond norms of doubly right-nested commutators. When \(\alpha_{\mathrm{comm},q_0}\le1\), the order-\(q_0\) truncation satisfies</p>
+    <div class="math-display" aria-label="BCH truncation bound in diamond norm">
+      \[
+      \left\|\exp\!\left(\sum_{q=1}^{q_0}\Phi_q\right)
+       -e^{\mathcal L_M}\cdots e^{\mathcal L_1}\right\|_{\diamond}
+      \le e\,\alpha_{\mathrm{comm},q_0}.
+      \]
+    </div>
+    <p class="result-note">These commutators have the form \([C_1,[C_2,\ldots,C_d]]\), where \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\). The bound does not require convergence of the full BCH series.</p>
+  </div>
+</figure>
+</div>
+<div aria-label="Other papers in this research area" class="papers-in-area">
+<div class="papers-in-area-heading">
+<h4>
+         Other papers
+        </h4>
+</div>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2607.11856" rel="noopener noreferrer" target="_blank">Trotter Error Compensation with Polylogarithmic Precision and Nested-Commutator Scaling without Ancillas</a>
+</h4>
+<p class="other-paper-authors">Xinzhao Wang, Shuo Zhou, Ziruo Wang, Pei Zeng, Jinzhao Sun, Qi Zhao, Tom Gur, and Tongyang Li.</p>
+<p class="other-paper-note">For local Hamiltonians, high-order channel compensation improves the evolution-time and system-size scaling of a \(K\)-th-order product formula to that of order \(2K+1\), with polylogarithmic precision dependence per circuit and no ancillas.</p>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2609.11508" rel="noopener noreferrer" target="_blank">Joint Mitigation of Algorithmic and Physical Errors in Noisy Hamiltonian Simulation</a>
+</h4>
+<p class="other-paper-authors">Shuo Zhou<sup class="order-mark">*</sup>, Xinzhao Wang<sup class="order-mark">*</sup>, Ruiqi Zhang<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Tongyang Li, and Shengyu Zhang.</p>
+<p class="other-paper-note">
+          Joint Richardson extrapolation cancels leading Trotter-error and physical-noise contributions along a single parameter path.
+         </p>
+</li>
+<li id="qsvt-product-formulas">
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a>
+</h4>
+<p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
+<p class="other-paper-note">Trotterization and Richardson extrapolation implement QSVT using one ancilla and no multi-qubit controlled gates, with near-optimal commutator-sensitive gate complexity.</p>
+</li>
+</ul>
+</div>
+</article>
+<!-- GROUP 3: arXiv:2607.28260v2, Theorems 1.1 and 1.2.
+         Keep the two task labels as prose, not artificial symbols such as T_state. -->
+<article aria-labelledby="theme-circuits" class="research-group" id="circuits">
+<div class="group-head">
+<div>
+<h3 id="theme-circuits">
+         Gate Complexity and Quantum Data Access
+        </h3>
+<p>
+         I study the gate cost of loading classical data into quantum circuits, including sparse QROM, state preparation, and block encoding. I also develop gate- and ancilla-efficient implementations of Hamiltonian simulation and quantum singular value transformation.
+        </p>
+</div>
+</div>
+<div class="featured">
+<div class="feature-copy">
+<div class="feature-heading">
+<h4>
+<a href="https://arxiv.org/abs/2607.28260" rel="noopener noreferrer" target="_blank">Optimal T Counts under Sparsity: from QROM to State Preparation and Block Encoding</a>
+</h4>
+</div>
+<p class="feature-authors">Tongyang Li, Fengning Ou, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Penghui Yao, Pei Yuan, and Shengyu Zhang.</p>
+<p>
+         We prove matching \(T\)-count upper and lower bounds for sparse QROM, state preparation, and block encoding. The lower bounds hold even with adaptive measurements and classical control.
+        </p>
+</div>
+<figure class="selected-result" aria-label="Optimal T-count bounds for sparse state preparation and block encoding">
+  <div class="result-excerpt-body">
+    <div class="result-case">
+      <p class="result-note result-lead">The worst-case number of \(T\) gates needed to prepare an \(n\)-qubit state with at most \(s\) nonzero computational-basis amplitudes to trace-distance error \(\varepsilon\) is</p>
+      <div class="math-display" aria-label="Optimal T count for sparse state preparation">
+        \[
+        \Theta\!\left(
+          \min\!\left\{s,\sqrt{s\log\frac{2^{n+1}}{s}}\right\}
+          +\sqrt{s\log\frac1\varepsilon}+\log\frac1\varepsilon
+        \right).
+        \]
+      </div>
+    </div>
+    <div class="result-case">
+      <p class="result-note result-lead">For a \(2^n\!\times 2^n\) matrix with entries bounded in magnitude by one and at most \(s\) nonzeros per row and column, the worst-case number of \(T\) gates for block encoding with normalization \(\Theta(s)\) and operator-norm error \(\varepsilon_{\mathrm{BE}}\) is</p>
+      <div class="math-display" aria-label="Optimal T count for sparse matrix block encoding">
+        \[
+        \Theta\!\left(
+          \sqrt{2^ns\!\left(n+\log\frac1{\varepsilon_{\mathrm{BE}}}\right)}
+          +\log\frac1{\varepsilon_{\mathrm{BE}}}
+        \right).
+        \]
+      </div>
+    </div>
+  </div>
+</figure>
+</div>
+<div aria-label="Other papers in this research area" class="papers-in-area">
+<div class="papers-in-area-heading">
+<h4>
+         Other papers
+        </h4>
+</div>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2608.30629" rel="noopener noreferrer" target="_blank">Gate-Efficient Implementation of Query-Optimal Time-Dependent Simulation</a>
+</h4>
+<p class="other-paper-authors">Boyang Chen, Minbo Gao, Zhengfeng Ji, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
+<p class="other-paper-note">
+          An exact dyadic factorization yields a gate-efficient implementation of our query-optimal time-dependent Hamiltonian simulation algorithm.
+         </p>
+</li>
+<li>
+<h4 class="other-paper-title"><a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a></h4>
+<p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
+<p class="other-paper-note">Also listed under <a href="#qsvt-product-formulas">Product-Formula Methods</a>. Its one-ancilla implementation has near-optimal, commutator-sensitive gate complexity.</p>
+</li><li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2510.06851" rel="noopener noreferrer" target="_blank">Randomized Quantum Singular Value Transformation</a>
+</h4>
+<p class="other-paper-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Yuxin Zhang<sup class="order-mark">*</sup>, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, and Shantanav Chakraborty.</p>
+<p class="other-paper-note">
+          Randomized QSVT via importance sampling and qDRIFT replaces explicit block encodings with sampled Hamiltonian evolutions. Its gate complexity is independent of the number of terms and quadratic in the polynomial degree.
+         </p>
+</li>
+</ul>
+</div>
+</article>
+<!-- GROUP 4: arXiv:2509.08911v1, Theorem 14, with the loss-norm bound set to 1. -->
+<article aria-labelledby="theme-learning" class="research-group" id="learning">
+<div class="group-head">
+<div>
+<h3 id="theme-learning">
+         Online Learning and Equilibrium Computation
+        </h3>
+<p>I study multiplicative-weights update (MWU) and related mirror-descent methods in matrix online learning, adaptive learning of quantum states, and quantum algorithms for correlated equilibria in general-sum games.</p>
+</div>
+</div>
+<div class="featured">
+<div class="feature-copy">
+<div class="feature-heading">
+<h4>
+<a href="https://arxiv.org/abs/2509.08911" rel="noopener noreferrer" target="_blank">Instance-Optimal Matrix Multiplicative Weight Update and Its Quantum Applications</a>
+</h4>
+</div>
+<p class="feature-authors">Weiyuan Gong, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Zhiyu Zhang.</p>
+<p>
+         We obtain instance-optimal regret for matrix learning from expert advice at the computational cost of standard matrix multiplicative weights. The main technical ingredient is a one-sided Jensen trace inequality for a class of potential functions.
+        </p>
+</div>
+<figure class="selected-result" aria-label="One-sided Jensen trace inequality for Laplace-mixture potentials">
+  <div class="result-excerpt-body">
+    <p class="result-note result-lead">If a twice-differentiable potential \(\Phi\) satisfies \(\Phi''(x)=\int_{\mathbb R}\mu(t)e^{-tx}\,\mathrm dt\) for all real \(x\) and some nonnegative \(\mu\), then any Hermitian matrices \(S,G\) with \(\|G\|_{\mathrm{op}}\le1\) satisfy the one-sided Jensen trace inequality</p>
+    <div class="math-display" aria-label="One-sided Jensen trace inequality">
+      \[
+      \operatorname{Tr}\Phi(S+G)
+      \le\frac12\operatorname{Tr}\!\left[(I+G)\Phi(S+I)+(I-G)\Phi(S-I)\right].
+      \]
+    </div>
+  </div>
+</figure>
+</div>
+<div aria-label="Other papers in this research area" class="papers-in-area">
+<div class="papers-in-area-heading">
+<h4>
+         Other papers
+        </h4>
+</div>
+<ul class="other-paper-list">
+<li>
+<h4 class="other-paper-title">
+<a href="https://arxiv.org/abs/2510.16782" rel="noopener noreferrer" target="_blank">Near-Optimal Quantum Algorithms for Computing (Coarse) Correlated Equilibria of General-Sum Games</a>
+</h4>
+<p class="other-paper-authors">Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yexin Zhang.</p>
+<p class="other-paper-note">
+          Quantum algorithms based on multiplicative weights yield near-optimal query complexity for correlated and coarse correlated equilibria.
+         </p>
+<div class="other-paper-meta">
+<span class="related-venue">
+           NeurIPS 2025
+          </span>
+</div>
+</li>
+<li>
+<h4 class="other-paper-title">
+<a href="https://doi.org/10.22331/q-2024-09-12-1471" rel="noopener noreferrer" target="_blank">Adaptive Online Learning of Quantum States</a>
+</h4>
+<p class="other-paper-authors">Xinyi Chen, Elad Hazan, Tongyang Li, Zhou Lu, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Rui Yang.</p>
+<p class="other-paper-note">
+          Adaptive and dynamic regret bounds for online learning of quantum states.
+         </p>
+<div class="other-paper-meta">
+<span class="related-venue">
+           Quantum 2024
+          </span>
+</div>
+</li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+<!-- PUBLICATIONS: Full list follows the uploaded October 2026 CV.
+         † means ALPHABETICAL ordering (as in the CV); * means equal contribution.
+         To add a paper, copy one <li class="publication"> ... </li> block. -->
+<section aria-labelledby="publications-title" class="section section-pubs" id="publications">
+<div class="container">
+<div class="section-heading">
+<h2 id="publications-title">
+       Publications
+      </h2>
+</div>
+<p class="author-note"><sup class="order-mark">†</sup> Alphabetical author order. <sup class="order-mark">*</sup> Equal contribution.</p>
+<h3 class="pub-group-heading">
+      Published or accepted
+     </h3>
+<ol class="publication-list">
+<li class="publication">
+<span class="pub-year">
+        2026
+       </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2604.01519">DQC1-completeness of normalized trace estimation for functions of log-local Hamiltonians</a>
+<p class="authors">Zhengfeng Ji, Tongyang Li, Changpeng Shao, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Yuxin Zhang.</p>
+<p class="pub-venue">
+         FOCS 2026, to appear.
+        </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+        2026
+       </span>
+<div>
+<a class="pub-title" href="https://doi.org/10.4230/LIPIcs.ICALP.2026.58">Quantum Multi-Level Estimation of Functionals of Discrete Distributions</a>
+<p class="authors">Kean Chen, Minbo Gao, Tongyang Li, Qisheng Wang, and <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>.</p>
+<p class="pub-venue">
+         ICALP 2026, LIPIcs 374, 58:1–58:23.
+        </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+        2025
+       </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2510.16782">Near-Optimal Quantum Algorithms for Computing (Coarse) Correlated Equilibria of General-Sum Games</a>
+<p class="authors">Tongyang Li, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Yexin Zhang.</p>
+<p class="pub-venue">
+         NeurIPS 2025.
+        </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+        2025
+       </span>
+<div>
+<a class="pub-title" href="https://doi.org/10.1038/s41467-025-64442-7">Efficient classical sampling from Gaussian boson sampling distributions on unweighted graphs</a>
+<p class="authors">Yexin Zhang<sup class="order-mark">*</sup>, Shuo Zhou<sup class="order-mark">*</sup>, <strong>Xinzhao Wang<sup class="order-mark">*</sup></strong>, Ziruo Wang, Ziyi Yang, Rui Yang, Yecheng Xue, and Tongyang Li.</p>
+<p class="pub-venue">
+         Nature Communications 16, 9335.
+        </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+        2024
+       </span>
+<div>
+<a class="pub-title" href="https://doi.org/10.22331/q-2024-09-12-1471">Adaptive online learning of quantum states</a>
+<p class="authors">Xinyi Chen, Elad Hazan, Tongyang Li, Zhou Lu, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Rui Yang.</p>
+<p class="pub-venue">
+         Quantum 8, 1471.
+        </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+        2024
+       </span>
+<div>
+<a class="pub-title" href="https://doi.org/10.1109/TIT.2024.3382037">A quantum algorithm framework for discrete probability distributions with applications to Rényi entropy estimation</a>
+<p class="authors"><strong>Xinzhao Wang</strong>, Shengyu Zhang, and Tongyang Li.</p>
+<p class="pub-venue">
+         IEEE Transactions on Information Theory 70(5), 3399–3426.
+        </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+        2024
+       </span>
+<div>
+<a class="pub-title" href="https://doi.org/10.4230/LIPIcs.TQC.2024.9">Quantum non-identical mean estimation: Efficient algorithms and fundamental limits</a>
+<p class="authors">Jiachen Hu, Tongyang Li, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, Yecheng Xue, Chenyi Zhang, and Han Zhong.</p>
+<p class="pub-venue">
+         TQC 2024, 9:1–9:21.
+        </p>
+</div>
+</li>
+</ol>
+<details class="pub-details" open="">
+<summary>
+<span>
+        Preprints
+       </span>
+<span class="details-meta">
+        12 papers
+        <span aria-hidden="true" class="details-chevron">
+         ⌄
+        </span>
+</span>
+</summary>
+<ol class="publication-list">
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2609.35668">Optimal Query Complexity for Ground-State Preparation</a>
+<p class="authors">Boyang Chen, Minbo Gao, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Shuo Zhou.</p>
+<p class="pub-venue">
+          arXiv:2609.35668.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2609.18757">Query-Optimal and Gate-Efficient Lindbladian Simulation</a>
+<p class="authors">Boyang Chen, Minbo Gao, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Shuo Zhou.</p>
+<p class="pub-venue">
+          arXiv:2609.18757.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2609.11508">Joint Mitigation of Algorithmic and Physical Errors in Noisy Hamiltonian Simulation</a>
+<p class="authors">Shuo Zhou<sup class="order-mark">*</sup>, <strong>Xinzhao Wang<sup class="order-mark">*</sup></strong>, Ruiqi Zhang<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Tongyang Li, and Shengyu Zhang.</p>
+<p class="pub-venue">
+          arXiv:2609.11508.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2608.30629">Gate-Efficient Implementation of the Query-Optimal Time-Dependent Hamiltonian Simulation</a>
+<p class="authors">Boyang Chen, Minbo Gao, Zhengfeng Ji, Tongyang Li, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Shuo Zhou.</p>
+<p class="pub-venue">
+          arXiv:2608.30629.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2608.06094">Time-Dependent Hamiltonian Simulation with Optimal Query Complexity</a>
+<p class="authors">Boyang Chen, Minbo Gao, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Shuo Zhou.</p>
+<p class="pub-venue">
+          arXiv:2608.06094.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2607.28260">Optimal T Counts under Sparsity: from QROM to State Preparation and Block Encoding</a>
+<p class="authors">Tongyang Li, Fengning Ou, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, Penghui Yao, Pei Yuan, and Shengyu Zhang.</p>
+<p class="pub-venue">
+          arXiv:2607.28260.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2607.11856">Trotter error compensation with polylogarithmic precision and nested-commutator scaling without ancillas</a>
+<p class="authors"><strong>Xinzhao Wang</strong>, Shuo Zhou, Ziruo Wang, Pei Zeng, Jinzhao Sun, Qi Zhao, Tom Gur, and Tongyang Li.</p>
+<p class="pub-venue">
+          arXiv:2607.11856.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2603.28602">Lindbladian Simulation with Commutator Bounds</a>
+<p class="authors"><strong>Xinzhao Wang<sup class="order-mark">*</sup></strong>, Shuo Zhou<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Shengyu Zhang, and Tongyang Li.</p>
+<p class="pub-venue">
+          arXiv:2603.28602.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2025
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2510.06851">Randomized Quantum Singular Value Transformation</a>
+<p class="authors"><strong>Xinzhao Wang<sup class="order-mark">*</sup></strong>, Yuxin Zhang<sup class="order-mark">*</sup>, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, and Shantanav Chakraborty.</p>
+<p class="pub-venue">
+          arXiv:2510.06851.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2025
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2509.08911">Instance-Optimal Matrix Multiplicative Weight Update and Its Quantum Applications</a>
+<p class="authors">Weiyuan Gong, Tongyang Li, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Zhiyu Zhang.</p>
+<p class="pub-venue">
+          arXiv:2509.08911.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2025
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2504.02385">Quantum singular value transformation without block encodings: Near-optimal complexity with minimal ancilla</a>
+<p class="authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, <strong>Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup></strong>, and Yuxin Zhang.</p>
+<p class="pub-venue">
+          arXiv:2504.02385.
+         </p>
+</div>
+</li>
+<li class="publication">
+<span class="pub-year">
+         2026
+        </span>
+<div>
+<a class="pub-title" href="https://arxiv.org/abs/2607.16116">Quantum-classical crossover in fault-tolerant quantum dynamics simulation</a>
+<p class="authors"><span class="crossover-lead"> Jinzhao Sun<sup class="order-mark">*</sup>, Bozhen Zhou<sup class="order-mark">*</sup>, Jue Xu<sup class="order-mark">*</sup>, et al. (31 authors) </span></p>
+<details class="author-details">
+<summary>
+           Show full author list
+          </summary>
+<p>
+           Jinzhao Sun*, Bozhen Zhou*, Jue Xu*, Yuan Yao*, Zhenyu Du*, Zixu Zhang*, Yuntian Gu*, Junxiang Huang, Shuo Zhou, Ziruo Wang, Alexander Yosifov, Wenzheng Dong, Yiming Huang, Daniel Serrano,
+           <strong>
+            Xinzhao Wang
+           </strong>
+           , Tianfeng Feng, Shreyas Sadugol, Wenjun Yu, Zhou You, Dayue Qin, Xiao-Ming Zhang, Yantao Wu, Aditya Iyer, You Zhou, Tongyang Li, Ying Li, Xiongfeng Ma, Qi Zhao, Pei Zeng, Pan Zhang, and Xiao Yuan.
+          </p>
+</details>
+<p class="pub-venue">
+          arXiv:2607.16116.
+         </p>
+</div>
+</li>
+</ol>
+</details>
+</div>
+</section>
+<!-- TALKS: Dates and titles follow the supplied CV. Education, honors,
+     teaching and the full talk list remain in the unchanged PDF CV. -->
+<section aria-labelledby="talks-title" class="section section-talks" id="talks">
+<div class="container">
+<div class="section-heading">
+<h2 id="talks-title">
+       Selected talks
+      </h2>
+</div>
+<ol class="talk-list">
+<li>
+<time datetime="2026-07-09">
+        July 2026
+       </time>
+<div>
+<p class="talk-title">
+         Quantum Multi-Level Estimation of Functionals of Discrete Distributions
+        </p>
+<p class="talk-venue">
+         ICALP 2026, Royal Holloway, University of London
+        </p>
+</div>
+</li>
+<li>
+<time datetime="2026-04-29">
+        April 2026
+       </time>
+<div>
+<p class="talk-title">
+         Quantum Singular Value Transformation without Block Encodings
+        </p>
+<p class="talk-venue">
+         Quantum Computing Seminar, University of Cambridge
+        </p>
+</div>
+</li>
+<li>
+<time datetime="2026-04-22">
+        April 2026
+       </time>
+<div>
+<p class="talk-title">
+         Quantum Singular Value Transformation without Block Encodings
+        </p>
+<p class="talk-venue">
+         QCTiP 2026, Mathematical Institute, University of Oxford
+        </p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<span>
+     ©
+     <span id="year">
+      2026
+     </span>
+     Xinzhao Wang · Updated October 2026
+    </span>
+<span>
+<a href="mailto:wangxz@stu.pku.edu.cn">Email</a>
+     ·
+     <a href="Xinzhao_Wang_CV.pdf">CV</a>
+     ·
+     <a href="#top">Back to top</a>
+</span>
+</div>
+</footer>
+</body>
+</html>
