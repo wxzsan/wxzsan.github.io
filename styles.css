@@ -28,6 +28,7 @@
 
 /* Base typography and accessible interactions */
 * { box-sizing: border-box; }
+[hidden], html:not([lang="zh-CN"]) [data-language="zh"], html[lang="zh-CN"] [data-language="en"] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 82px; }
 body {
   margin: 0;
@@ -60,6 +61,12 @@ button, summary { font: inherit; }
 .brand { display: flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; white-space: nowrap; }
 .brand img { width: 29px; height: 29px; object-fit: contain; }
 .site-nav { display: flex; align-items: center; gap: 27px; font-family: var(--font-sans); }
+.site-nav { margin-left: auto; }
+.header-controls { display: flex; align-items: center; gap: 12px; }
+.language-switcher { display: flex; align-items: center; gap: 5px; white-space: nowrap; font-family: var(--font-sans); font-size: 13px; color: var(--faint); }
+.language-switcher button { border: 0; padding: 7px 3px; background: transparent; color: var(--faint); cursor: pointer; }
+.language-switcher button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: .3em; }
+.language-switcher button:hover { color: var(--link); }
 .site-nav a { color: var(--muted); font-size: 14px; text-decoration: none; white-space: nowrap; }
 .site-nav a:hover { color: var(--ink); }
 .menu-button { display: none; border: 0; background: transparent; color: var(--ink); padding: 8px; cursor: pointer; }
@@ -79,6 +86,12 @@ button, summary { font: inherit; }
 .hero-content { grid-area: content; min-width: 0; max-width: var(--reading-width); }
 .eyebrow { margin-bottom: 10px; font-family: var(--font-sans); font-size: 12px; color: var(--muted); letter-spacing: .025em; }
 h1 { font-size: clamp(44px,5vw,56px); line-height: 1.08; letter-spacing: -.012em; }
+h1 > [data-language] { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 18px; }
+.name-primary, .name-secondary { white-space: nowrap; }
+.name-secondary { font-size: .48em; color: var(--muted); letter-spacing: 0; }
+:lang(zh-CN) { font-family: "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif; }
+html[lang="zh-CN"] body { line-height: 1.8; }
+html[lang="zh-CN"] .group-head p, html[lang="zh-CN"] .feature-copy > p, html[lang="zh-CN"] .other-paper-note, html[lang="zh-CN"] .result-note { line-height: 1.75; }
 .hero-role { margin-top: 12px; color: var(--muted); font-size: 16px; }
 .hero-role a { color: inherit; text-decoration-color: #b3bfbb; }
 .about-copy p + p { margin-top: 11px; }
@@ -237,6 +250,8 @@ mjx-container[jax="SVG"] { font-weight: 400; }
   :root { --section-space: 42px; --math-size: 16.5px; --group-space: 37px; --title-size: 19.5px; --caption-size: 14px; --summary-size: 15px; --other-summary-size: 14.2px; --author-size: 13px; }
   .container { width: calc(100% - 36px); }
   .header-inner { min-height: 57px; }
+  .header-inner { gap: 12px; }
+  .header-controls { margin-left: auto; gap: 8px; }
   .site-nav { display: none; position: absolute; top: 57px; left: 18px; right: 18px; flex-direction: column; align-items: stretch; gap: 0; padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); box-shadow: 0 10px 28px rgba(31,48,50,.08); }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: 10px 12px; }

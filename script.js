@@ -1,17 +1,24 @@
-/* Navigation and equation overflow indicators. No content is generated here. */
+/* Navigation, publication count, and equation overflow indicators. */
 (() => {
   'use strict';
   const button = document.querySelector('.menu-button');
   const nav = document.querySelector('.site-nav');
+  const isChinese = () => document.documentElement.lang === 'zh-CN';
+  const updateMenuLabel = () => {
+    const open = nav?.classList.contains('is-open');
+    button?.setAttribute('aria-label', isChinese()
+      ? (open ? '关闭导航菜单' : '打开导航菜单')
+      : (open ? 'Close navigation menu' : 'Open navigation menu'));
+  };
   const closeMenu = () => {
     nav?.classList.remove('is-open');
     button?.setAttribute('aria-expanded', 'false');
-    button?.setAttribute('aria-label', 'Open navigation menu');
+    updateMenuLabel();
   };
   button?.addEventListener('click', () => {
     const open = nav?.classList.toggle('is-open');
     button.setAttribute('aria-expanded', String(Boolean(open)));
-    button.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    updateMenuLabel();
   });
   nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
   document.addEventListener('keydown', event => {
@@ -30,7 +37,7 @@
       row.dataset.overflow = String(overflow);
       if (overflow) {
         row.setAttribute('tabindex', '0');
-        row.setAttribute('title', 'Scroll horizontally to read the full equation');
+        row.setAttribute('title', isChinese() ? '横向滚动以查看完整公式' : 'Scroll horizontally to read the full equation');
       } else {
         row.removeAttribute('tabindex');
         row.removeAttribute('title');
@@ -54,9 +61,16 @@
 
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
-  const count = document.querySelector('.pub-details .details-meta');
+  const count = document.querySelector('[data-preprint-count]');
   const preprints = document.querySelectorAll('.pub-details .publication').length;
-  if (count?.firstChild?.nodeType === Node.TEXT_NODE) {
-    count.firstChild.textContent = `${preprints} papers `;
-  }
+  const updateCount = () => {
+    if (count) count.textContent = isChinese() ? `${preprints} 篇论文` : `${preprints} papers`;
+  };
+  window.addEventListener('languagechange', () => {
+    updateMenuLabel();
+    updateCount();
+    scheduleUpdate();
+  });
+  updateMenuLabel();
+  updateCount();
 })();

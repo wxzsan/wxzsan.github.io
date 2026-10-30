@@ -20,6 +20,7 @@
 <link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-roman.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-sans.css" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
+<script src="language.js"></script>
 <script src="mathjax-config.js">
 </script>
 <script defer="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js">
@@ -28,57 +29,55 @@
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main"><span data-language="en" lang="en">Skip to content</span><span data-language="zh" lang="zh-CN">跳转到正文</span></a>
 <header class="site-header">
 <div class="container header-inner">
 <a aria-label="Xinzhao Wang, home" class="brand" href="#top"><img alt="" height="29" src="assets/jirachi-icon.png" width="29"/>
 <span>
       Xinzhao Wang
      </span></a>
+
+<nav aria-label="Main navigation" class="site-nav" id="main-nav">
+<a href="#about"><span data-language="en" lang="en">About</span><span data-language="zh" lang="zh-CN">关于</span></a>
+<a href="#research"><span data-language="en" lang="en">Research</span><span data-language="zh" lang="zh-CN">研究</span></a>
+<a href="#publications"><span data-language="en" lang="en">Publications</span><span data-language="zh" lang="zh-CN">论文</span></a>
+<a href="#talks"><span data-language="en" lang="en">Talks</span><span data-language="zh" lang="zh-CN">报告</span></a>
+</nav>
+<div class="header-controls">
+<div class="language-switcher" role="group" aria-label="Language" hidden>
+<button type="button" data-language-option="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+<span aria-hidden="true">/</span>
+<button type="button" data-language-option="zh" lang="zh-CN" aria-label="中文" aria-pressed="false">中文</button>
+</div>
 <button aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation menu" class="menu-button" type="button">
 <svg aria-hidden="true" viewBox="0 0 24 24">
 <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7">
 </path>
 </svg>
 </button>
-<nav aria-label="Main navigation" class="site-nav" id="main-nav">
-<a href="#about">About</a>
-<a href="#research">Research</a>
-<a href="#publications">Publications</a>
-<a href="#talks">Talks</a>
-</nav>
+</div>
 </div>
 </header>
 <main id="main">
 <!-- ABOUT: Edit these paragraphs and the links below. -->
 <section aria-labelledby="page-title" class="hero container" id="top">
 <div class="hero-heading" id="about">
-<p class="eyebrow">
-      Computer Science · Peking University
-     </p>
-<h1 id="page-title">
-      Xinzhao Wang
-     </h1>
-<p class="hero-role">
-      Ph.D. candidate · advised by
-      <a href="https://www.tongyangli.com/" rel="noopener noreferrer" target="_blank">Tongyang Li</a>
-</p>
+<p class="eyebrow"><span data-language="en" lang="en">Computer Science · Peking University</span><span data-language="zh" lang="zh-CN">计算机科学 · 北京大学</span></p>
+<h1 id="page-title"><span data-language="en" lang="en"><span class="name-primary">Xinzhao Wang</span><span class="name-secondary" lang="zh-CN">王昕兆</span></span><span data-language="zh" lang="zh-CN"><span class="name-primary">王昕兆</span><span class="name-secondary" lang="en">Xinzhao Wang</span></span></h1>
+<p class="hero-role"><span data-language="en" lang="en">Ph.D. candidate · advised by
+      <a href="https://www.tongyangli.com/" rel="noopener noreferrer" target="_blank">Tongyang Li</a></span><span data-language="zh" lang="zh-CN">博士研究生 · 导师：<a href="https://www.tongyangli.com/" rel="noopener noreferrer" target="_blank">Tongyang Li</a></span></p>
 </div>
 <div class="hero-content">
 <div class="about-copy">
-<p>
-       I work on quantum algorithms and computational complexity, particularly quantum simulation. I study both the asymptotic complexity of quantum algorithms and the resources required for their circuit implementations, including gate complexity and ancilla requirements.
-      </p>
-<p class="visit-note">I was a visiting scholar at UC Berkeley (July 2024–February 2025), hosted by <a href="https://lin.caltech.edu/" rel="noopener noreferrer" target="_blank">Lin Lin</a>.</p>
+<p><span data-language="en" lang="en">I work on quantum algorithms and computational complexity, particularly quantum simulation. I study both the asymptotic complexity of quantum algorithms and the resources required for their circuit implementations, including gate complexity and ancilla requirements.</span><span data-language="zh" lang="zh-CN">我的研究方向是量子算法与计算复杂性，尤其关注量子模拟。我既研究量子算法的渐近复杂度，也研究其线路实现所需的资源，包括量子门复杂度和辅助量子比特需求。</span></p>
+<p class="visit-note"><span data-language="en" lang="en">I was a visiting scholar at UC Berkeley (July 2024–February 2025), hosted by <a href="https://lin.caltech.edu/" rel="noopener noreferrer" target="_blank">Lin Lin</a>.</span><span data-language="zh" lang="zh-CN">2024 年 7 月至 2025 年 2 月，我在加州大学伯克利分校访问，合作导师为 <a href="https://lin.caltech.edu/" rel="noopener noreferrer" target="_blank">Lin Lin</a>。</span></p>
 </div>
 <div aria-label="Contact and academic profiles" class="hero-links">
 <a href="mailto:wangxz@stu.pku.edu.cn">wangxz@stu.pku.edu.cn</a>
 <a href="https://scholar.google.com/citations?hl=en&amp;user=1Ey4DPoAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a>
-<a href="Xinzhao_Wang_CV.pdf" rel="noopener noreferrer" target="_blank">CV (PDF)</a>
+<a href="Xinzhao_Wang_CV.pdf" rel="noopener noreferrer" target="_blank"><span data-language="en" lang="en">CV (PDF)</span><span data-language="zh" lang="zh-CN">简历（PDF）</span></a>
 </div>
-<p class="postdoc-note">
-      Seeking postdoctoral positions in quantum algorithms and related areas starting in 2027.
-     </p>
+<p class="postdoc-note"><span data-language="en" lang="en">Seeking postdoctoral positions in quantum algorithms and related areas starting in 2027.</span><span data-language="zh" lang="zh-CN">我正在寻找 2027 年开始的量子算法及相关方向博士后职位。</span></p>
 </div>
 <figure class="portrait">
 <img alt="Portrait of Xinzhao Wang" height="168" src="assets/profile.webp" width="168"/>
@@ -87,10 +86,8 @@
 <section aria-labelledby="research-title" class="section section-research" id="research">
 <div class="container">
 <div class="section-heading">
-<h2 id="research-title">
-       Research
-      </h2>
-<p class="research-credit-note">† Alphabetical author order  ·  * Equal contribution</p>
+<h2 id="research-title"><span data-language="en" lang="en">Research</span><span data-language="zh" lang="zh-CN">研究工作</span></h2>
+<p class="research-credit-note"><span data-language="en" lang="en">† Alphabetical author order  ·  * Equal contribution</span><span data-language="zh" lang="zh-CN">† 作者按字母顺序排列 · * 同等贡献</span></p>
 </div>
 <!-- Result excerpts are self-contained statements: define the object, assumptions,
      and resource/inequality before the display. An equation completes its sentence.
@@ -98,8 +95,8 @@
 <article aria-labelledby="theme-query" class="research-group" id="query-complexity">
 <div class="group-head">
 <div>
-<h3 id="theme-query">Query Complexity and Computational Hardness</h3>
-<p>I design quantum algorithms and study lower bounds for simulation, ground-state preparation, and estimation, primarily in the query model. I also study the computational complexity of estimating spectral properties of Hamiltonians.</p>
+<h3 id="theme-query"><span data-language="en" lang="en">Query Complexity and Computational Hardness</span><span data-language="zh" lang="zh-CN">查询复杂度与计算困难性</span></h3>
+<p><span data-language="en" lang="en">I design quantum algorithms and study lower bounds for simulation, ground-state preparation, and estimation, primarily in the query model. I also study the computational complexity of estimating spectral properties of Hamiltonians.</span><span data-language="zh" lang="zh-CN">我主要在查询模型下研究量子模拟、基态制备和估计问题的算法及复杂度下界，也研究估计哈密顿量谱性质的计算复杂性。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -110,11 +107,11 @@
 </h4>
 </div>
 <p class="feature-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p>We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. We develop a new analysis of catalyst-omission error using the transducer’s private block. This analysis guides the choice of LCU coefficients for combining circuits with different transducer reuse counts, canceling leading error terms and yielding factorial error suppression.</p>
+<p><span data-language="en" lang="en">We obtain optimal query complexity for Lipschitz-continuous time-dependent Hamiltonian simulation, matching the bound for time-independent Hamiltonians. We develop a new analysis of catalyst-omission error using the transducer’s private block. This analysis guides the choice of LCU coefficients for combining circuits with different transducer reuse counts, canceling leading error terms and yielding factorial error suppression.</span><span data-language="zh" lang="zh-CN">我们给出了 Lipschitz 连续含时哈密顿量模拟的最优查询复杂度，与不含时情形的界一致。我们利用 transducer 的 private block，对省略催化态所引入的误差提出了新的分析。该分析指引了不同 transducer 重用次数线路的 LCU 系数选择，通过消去主导误差项，实现阶乘级的误差衰减。</span></p>
 </div>
 <figure class="selected-result" aria-label="Optimal query complexity for time-dependent Hamiltonian simulation">
   <div class="result-excerpt-body">
-    <p class="result-note result-lead">A Lipschitz-continuous Hamiltonian \(H(t)\) on \([0,T]\) with \(\|H(t)\|\le\alpha\) can be simulated to error \(\varepsilon\) using the optimal number of queries to a time-indexed block encoding:</p>
+    <p class="result-note result-lead"><span data-language="en" lang="en">A Lipschitz-continuous Hamiltonian \(H(t)\) on \([0,T]\) with \(\|H(t)\|\le\alpha\) can be simulated to error \(\varepsilon\) using the optimal number of queries to a time-indexed block encoding:</span><span data-language="zh" lang="zh-CN">对于定义在 \([0,T]\) 上、满足 \(\|H(t)\|\le\alpha\) 的 Lipschitz 连续哈密顿量 \(H(t)\)，将模拟误差控制在 \(\varepsilon\) 内所需的最优含时间索引块编码查询次数为：</span></p>
     <div class="math-display" aria-label="Optimal time-dependent Hamiltonian simulation query bound">
       \[
       q=O\!\left(\alpha T+
@@ -127,46 +124,36 @@
 </div>
 <div aria-label="Other papers in this research area" class="papers-in-area">
 <div class="papers-in-area-heading">
-<h4>
-         Other papers
-        </h4>
+<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
 </div>
 <div class="related-category">
-<h5>
-         Simulation and ground-state preparation
-        </h5>
+<h5><span data-language="en" lang="en">Simulation and ground-state preparation</span><span data-language="zh" lang="zh-CN">量子模拟与基态制备</span></h5>
 <ul class="other-paper-list">
 <li>
 <h4 class="other-paper-title">
 <a href="https://arxiv.org/abs/2609.18757" rel="noopener noreferrer" target="_blank">Query-Optimal and Gate-Efficient Lindbladian Simulation</a>
 </h4>
 <p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note">
-           Optimal query complexity for Lindbladian simulation, with gate complexity linear in the query count up to polylogarithmic factors.
-          </p>
+<p class="other-paper-note"><span data-language="en" lang="en">Optimal query complexity for Lindbladian simulation, with gate complexity linear in the query count up to polylogarithmic factors.</span><span data-language="zh" lang="zh-CN">Lindbladian 模拟达到最优查询复杂度，量子门复杂度除多对数因子外与查询次数成正比。</span></p>
 </li>
 <li>
 <h4 class="other-paper-title">
 <a href="https://arxiv.org/abs/2609.35668" rel="noopener noreferrer" target="_blank">Optimal Query Complexity for Ground-State Preparation</a>
 </h4>
 <p class="other-paper-authors">Boyang Chen, Minbo Gao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note">
-           Matching query bounds for ground-state preparation, accounting separately for Hamiltonian access and initial-state preparation.
-          </p>
+<p class="other-paper-note"><span data-language="en" lang="en">Matching query bounds for ground-state preparation, accounting separately for Hamiltonian access and initial-state preparation.</span><span data-language="zh" lang="zh-CN">给出基态制备相匹配的查询复杂度上下界，并分别计量哈密顿量访问和初态制备的查询成本。</span></p>
 </li>
 </ul>
 </div>
 <div class="related-category">
-<h5>
-         Estimation
-        </h5>
+<h5><span data-language="en" lang="en">Estimation</span><span data-language="zh" lang="zh-CN">估计问题</span></h5>
 <ul class="other-paper-list">
 <li>
 <h4 class="other-paper-title">
 <a href="https://arxiv.org/abs/2604.01519" rel="noopener noreferrer" target="_blank">DQC1-Completeness of Normalized Trace Estimation</a>
 </h4>
 <p class="other-paper-authors">Zhengfeng Ji, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
-<p class="other-paper-note">Proves DQC1-completeness for normalized trace estimation of broad classes of functions of log-local Hamiltonians, with classical query hardness governed by approximate degree.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Proves DQC1-completeness for normalized trace estimation of broad classes of functions of log-local Hamiltonians, with classical query hardness governed by approximate degree.</span><span data-language="zh" lang="zh-CN">证明了广泛一类 log-local 哈密顿量函数的归一化迹估计是 DQC1 完全问题，其经典查询困难性由近似度数刻画。</span></p>
 <div class="other-paper-meta">
 <span class="related-venue">
             FOCS 2026
@@ -178,9 +165,7 @@
 <a href="https://doi.org/10.4230/LIPIcs.ICALP.2026.58" rel="noopener noreferrer" target="_blank">Quantum Multi-Level Estimation of Functionals of Discrete Distributions</a>
 </h4>
 <p class="other-paper-authors">Kean Chen, Minbo Gao, Tongyang Li, Qisheng Wang, and Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>.</p>
-<p class="other-paper-note">
-           A multi-level amplitude estimation framework using non-destructive singular-value discrimination, with near-optimal algorithms for non-integer Tsallis entropy estimation.
-          </p>
+<p class="other-paper-note"><span data-language="en" lang="en">A multi-level amplitude estimation framework using non-destructive singular-value discrimination, with near-optimal algorithms for non-integer Tsallis entropy estimation.</span><span data-language="zh" lang="zh-CN">基于非破坏性奇异值判别构建多层振幅估计框架，并给出非整数阶 Tsallis 熵估计的近最优算法。</span></p>
 <div class="other-paper-meta">
 <span class="related-venue">
             ICALP 2026
@@ -192,9 +177,7 @@
 <a href="https://doi.org/10.1109/TIT.2024.3382037" rel="noopener noreferrer" target="_blank">A Quantum Algorithm Framework for Discrete Probability Distributions with Applications to Rényi Entropy Estimation</a>
 </h4>
 <p class="other-paper-authors">Xinzhao Wang, Shengyu Zhang, and Tongyang Li.</p>
-<p class="other-paper-note">
-           A framework combining QSVT, variable-time amplitude estimation, and quantum annealing, with applications to Rényi entropy estimation.
-          </p>
+<p class="other-paper-note"><span data-language="en" lang="en">A framework combining QSVT, variable-time amplitude estimation, and quantum annealing, with applications to Rényi entropy estimation.</span><span data-language="zh" lang="zh-CN">结合 QSVT、变时间振幅估计与量子退火，构建离散概率分布的量子算法框架，并应用于 Rényi 熵估计。</span></p>
 <div class="other-paper-meta">
 <span class="related-venue">
             IEEE TIT 2024
@@ -206,9 +189,7 @@
 <a href="https://doi.org/10.4230/LIPIcs.TQC.2024.9" rel="noopener noreferrer" target="_blank">Quantum Non-Identical Mean Estimation</a>
 </h4>
 <p class="other-paper-authors">Jiachen Hu, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Yecheng Xue, Chenyi Zhang, and Han Zhong.</p>
-<p class="other-paper-note">
-           Quantum algorithms and lower bounds for mean estimation from non-identical quantum samples.
-          </p>
+<p class="other-paper-note"><span data-language="en" lang="en">Quantum algorithms and lower bounds for mean estimation from non-identical quantum samples.</span><span data-language="zh" lang="zh-CN">研究来自非相同量子样本的均值估计，给出量子算法与复杂度下界。</span></p>
 <div class="other-paper-meta">
 <span class="related-venue">
             TQC 2024
@@ -224,10 +205,8 @@
 <article aria-labelledby="theme-pf" class="research-group" id="product-formulas">
 <div class="group-head">
 <div>
-<h3 id="theme-pf">
-         Product-Formula Methods and Error Mitigation
-        </h3>
-<p>I study commutator-based error bounds for product formulas, and develop compensation and extrapolation methods for reducing Trotter errors and mitigating physical noise in Hamiltonian and Lindbladian simulation.</p>
+<h3 id="theme-pf"><span data-language="en" lang="en">Product-Formula Methods and Error Mitigation</span><span data-language="zh" lang="zh-CN">乘积公式方法与误差缓解</span></h3>
+<p><span data-language="en" lang="en">I study commutator-based error bounds for product formulas, and develop compensation and extrapolation methods for reducing Trotter errors and mitigating physical noise in Hamiltonian and Lindbladian simulation.</span><span data-language="zh" lang="zh-CN">我研究基于对易子的乘积公式误差界，并发展补偿与外推方法，以降低哈密顿量和 Lindbladian 模拟中的 Trotter 误差及物理噪声影响。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -238,11 +217,11 @@
 </h4>
 </div>
 <p class="feature-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Shuo Zhou<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Shengyu Zhang, and Tongyang Li.</p>
-<p>We derive commutator-based Trotter error bounds for Lindbladian simulation, yielding \(O(\sqrt N)\) system-size scaling in the number of Trotter steps for local \(N\)-site systems. For observable estimation, Richardson extrapolation preserves this commutator scaling while making the number of steps per circuit polylogarithmic in inverse precision. To control the extrapolation remainder, we establish a finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series.</p>
+<p><span data-language="en" lang="en">We derive commutator-based Trotter error bounds for Lindbladian simulation, yielding \(O(\sqrt N)\) system-size scaling in the number of Trotter steps for local \(N\)-site systems. For observable estimation, Richardson extrapolation preserves this commutator scaling while making the number of steps per circuit polylogarithmic in inverse precision. To control the extrapolation remainder, we establish a finite-order BCH truncation bound in terms of doubly right-nested commutators, without assuming convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">我们建立了 Lindbladian 模拟中基于对易子的 Trotter 误差界，使局域 \(N\) 格点系统的 Trotter 步数具有 \(O(\sqrt N)\) 的系统规模依赖。在可观测量估计中，Richardson 外推保留了这一对易子标度，并使每条线路的步数仅以多对数方式依赖于精度的倒数。为控制外推余项，我们建立了基于双重右嵌套对易子的有限阶 BCH 截断界，而无须假设完整 BCH 级数收敛。</span></p>
 </div>
 <figure class="selected-result" aria-label="Finite-order BCH truncation bound for Lindbladian channels">
   <div class="result-excerpt-body">
-    <p class="result-note result-lead">For Lindbladian generators \(\mathcal L_1,\ldots,\mathcal L_M\), let \(\Phi_q\) denote the degree-\(q\) term in the formal BCH logarithm of \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\), and let \(\alpha_{\mathrm{comm},q_0}\) be the associated weighted sum of diamond norms of doubly right-nested commutators. When \(\alpha_{\mathrm{comm},q_0}\le1\), the order-\(q_0\) truncation satisfies</p>
+    <p class="result-note result-lead"><span data-language="en" lang="en">For Lindbladian generators \(\mathcal L_1,\ldots,\mathcal L_M\), let \(\Phi_q\) denote the degree-\(q\) term in the formal BCH logarithm of \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\), and let \(\alpha_{\mathrm{comm},q_0}\) be the associated weighted sum of diamond norms of doubly right-nested commutators. When \(\alpha_{\mathrm{comm},q_0}\le1\), the order-\(q_0\) truncation satisfies</span><span data-language="zh" lang="zh-CN">对于 Lindbladian 生成元 \(\mathcal L_1,\ldots,\mathcal L_M\)，令 \(\Phi_q\) 为 \(e^{\mathcal L_M}\cdots e^{\mathcal L_1}\) 的形式 BCH 对数中 \(q\) 次项，并令 \(\alpha_{\mathrm{comm},q_0}\) 为相应双重右嵌套对易子的 diamond 范数加权和。当 \(\alpha_{\mathrm{comm},q_0}\le1\) 时，\(q_0\) 阶截断满足</span></p>
     <div class="math-display" aria-label="BCH truncation bound in diamond norm">
       \[
       \left\|\exp\!\left(\sum_{q=1}^{q_0}\Phi_q\right)
@@ -250,15 +229,13 @@
       \le e\,\alpha_{\mathrm{comm},q_0}.
       \]
     </div>
-    <p class="result-note">These commutators have the form \([C_1,[C_2,\ldots,C_d]]\), where \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\). The bound does not require convergence of the full BCH series.</p>
+    <p class="result-note"><span data-language="en" lang="en">These commutators have the form \([C_1,[C_2,\ldots,C_d]]\), where \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\). The bound does not require convergence of the full BCH series.</span><span data-language="zh" lang="zh-CN">这里的对易子形如 \([C_1,[C_2,\ldots,C_d]]\)，其中 \(C_r=[\mathcal L_{j_{r,1}},[\ldots,[\mathcal L_{j_{r,q_r-1}},\mathcal L_{j_{r,q_r}}]]]\)。该界不要求完整 BCH 级数收敛。</span></p>
   </div>
 </figure>
 </div>
 <div aria-label="Other papers in this research area" class="papers-in-area">
 <div class="papers-in-area-heading">
-<h4>
-         Other papers
-        </h4>
+<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
 </div>
 <ul class="other-paper-list">
 <li>
@@ -266,23 +243,21 @@
 <a href="https://arxiv.org/abs/2607.11856" rel="noopener noreferrer" target="_blank">Trotter Error Compensation with Polylogarithmic Precision and Nested-Commutator Scaling without Ancillas</a>
 </h4>
 <p class="other-paper-authors">Xinzhao Wang, Shuo Zhou, Ziruo Wang, Pei Zeng, Jinzhao Sun, Qi Zhao, Tom Gur, and Tongyang Li.</p>
-<p class="other-paper-note">For local Hamiltonians, high-order channel compensation improves the evolution-time and system-size scaling of a \(K\)-th-order product formula to that of order \(2K+1\), with polylogarithmic precision dependence per circuit and no ancillas.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">For local Hamiltonians, high-order channel compensation improves the evolution-time and system-size scaling of a \(K\)-th-order product formula to that of order \(2K+1\), with polylogarithmic precision dependence per circuit and no ancillas.</span><span data-language="zh" lang="zh-CN">对于局域哈密顿量，高阶量子信道补偿将 \(K\) 阶乘积公式对演化时间和系统规模的依赖改善至 \(2K+1\) 阶，同时每条线路仅有多对数的精度依赖，且无须辅助量子比特。</span></p>
 </li>
 <li>
 <h4 class="other-paper-title">
 <a href="https://arxiv.org/abs/2609.11508" rel="noopener noreferrer" target="_blank">Joint Mitigation of Algorithmic and Physical Errors in Noisy Hamiltonian Simulation</a>
 </h4>
 <p class="other-paper-authors">Shuo Zhou<sup class="order-mark">*</sup>, Xinzhao Wang<sup class="order-mark">*</sup>, Ruiqi Zhang<sup class="order-mark">*</sup>, Xiaoyang Wang, Yi-Cong Zheng, Tongyang Li, and Shengyu Zhang.</p>
-<p class="other-paper-note">
-          Joint Richardson extrapolation cancels leading Trotter-error and physical-noise contributions along a single parameter path.
-         </p>
+<p class="other-paper-note"><span data-language="en" lang="en">Joint Richardson extrapolation cancels leading Trotter-error and physical-noise contributions along a single parameter path.</span><span data-language="zh" lang="zh-CN">沿单一参数路径进行联合 Richardson 外推，同时消去 Trotter 误差和物理噪声的主导项。</span></p>
 </li>
 <li id="qsvt-product-formulas">
 <h4 class="other-paper-title">
 <a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a>
 </h4>
 <p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
-<p class="other-paper-note">Trotterization and Richardson extrapolation implement QSVT using one ancilla and no multi-qubit controlled gates, with near-optimal commutator-sensitive gate complexity.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Trotterization and Richardson extrapolation implement QSVT using one ancilla and no multi-qubit controlled gates, with near-optimal commutator-sensitive gate complexity.</span><span data-language="zh" lang="zh-CN">结合 Trotter 分解与 Richardson 外推，仅用一个辅助量子比特、无须多量子比特受控门即可实现 QSVT，并达到近最优且依赖于对易子的量子门复杂度。</span></p>
 </li>
 </ul>
 </div>
@@ -292,12 +267,8 @@
 <article aria-labelledby="theme-circuits" class="research-group" id="circuits">
 <div class="group-head">
 <div>
-<h3 id="theme-circuits">
-         Gate Complexity and Quantum Data Access
-        </h3>
-<p>
-         I study the gate cost of loading classical data into quantum circuits, including sparse QROM, state preparation, and block encoding. I also develop gate- and ancilla-efficient implementations of Hamiltonian simulation and quantum singular value transformation.
-        </p>
+<h3 id="theme-circuits"><span data-language="en" lang="en">Gate Complexity and Quantum Data Access</span><span data-language="zh" lang="zh-CN">量子门复杂度与量子数据访问</span></h3>
+<p><span data-language="en" lang="en">I study the gate cost of loading classical data into quantum circuits, including sparse QROM, state preparation, and block encoding. I also develop gate- and ancilla-efficient implementations of Hamiltonian simulation and quantum singular value transformation.</span><span data-language="zh" lang="zh-CN">我研究将经典数据载入量子线路的量子门成本，包括稀疏 QROM、量子态制备和块编码；也研究节省量子门和辅助量子比特的哈密顿量模拟与量子奇异值变换实现方法。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -308,14 +279,12 @@
 </h4>
 </div>
 <p class="feature-authors">Tongyang Li, Fengning Ou, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, Penghui Yao, Pei Yuan, and Shengyu Zhang.</p>
-<p>
-         We prove matching \(T\)-count upper and lower bounds for sparse QROM, state preparation, and block encoding. Our upper bounds build on a multilevel hashing scheme for sparse QROM. The lower bounds hold even with adaptive measurements and classical control.
-        </p>
+<p><span data-language="en" lang="en">We prove matching \(T\)-count upper and lower bounds for sparse QROM, state preparation, and block encoding. Our upper bounds build on a multilevel hashing scheme for sparse QROM. The lower bounds hold even with adaptive measurements and classical control.</span><span data-language="zh" lang="zh-CN">我们证明了稀疏 QROM、量子态制备和块编码相匹配的 \(T\) 门数量上下界。上界构造基于稀疏 QROM 的多层哈希方案。即使允许自适应测量与经典控制，下界依然成立。</span></p>
 </div>
 <figure class="selected-result" aria-label="Optimal T-count bounds for sparse state preparation and block encoding">
   <div class="result-excerpt-body">
     <div class="result-case">
-      <p class="result-note result-lead">The worst-case number of \(T\) gates needed to prepare an \(n\)-qubit state with at most \(s\) nonzero computational-basis amplitudes to trace-distance error \(\varepsilon\) is</p>
+      <p class="result-note result-lead"><span data-language="en" lang="en">The worst-case number of \(T\) gates needed to prepare an \(n\)-qubit state with at most \(s\) nonzero computational-basis amplitudes to trace-distance error \(\varepsilon\) is</span><span data-language="zh" lang="zh-CN">将一个在计算基下至多具有 \(s\) 个非零振幅的 \(n\) 量子比特态制备至迹距离误差 \(\varepsilon\)，最坏情况下所需的 \(T\) 门数量为</span></p>
       <div class="math-display" aria-label="Optimal T count for sparse state preparation">
         \[
         \Theta\!\left(
@@ -326,7 +295,7 @@
       </div>
     </div>
     <div class="result-case">
-      <p class="result-note result-lead">For a \(2^n\!\times 2^n\) matrix with entries bounded in magnitude by one and at most \(s\) nonzeros per row and column, the worst-case number of \(T\) gates for block encoding with normalization \(\Theta(s)\) and operator-norm error \(\varepsilon_{\mathrm{BE}}\) is</p>
+      <p class="result-note result-lead"><span data-language="en" lang="en">For a \(2^n\!\times 2^n\) matrix with entries bounded in magnitude by one and at most \(s\) nonzeros per row and column, the worst-case number of \(T\) gates for block encoding with normalization \(\Theta(s)\) and operator-norm error \(\varepsilon_{\mathrm{BE}}\) is</span><span data-language="zh" lang="zh-CN">对于元素绝对值至多为 1、每行每列至多有 \(s\) 个非零元素的 \(2^n\!\times 2^n\) 矩阵，实现归一化因子为 \(\Theta(s)\)、算子范数误差为 \(\varepsilon_{\mathrm{BE}}\) 的块编码，最坏情况下所需的 \(T\) 门数量为</span></p>
       <div class="math-display" aria-label="Optimal T count for sparse matrix block encoding">
         \[
         \Theta\!\left(
@@ -341,9 +310,7 @@
 </div>
 <div aria-label="Other papers in this research area" class="papers-in-area">
 <div class="papers-in-area-heading">
-<h4>
-         Other papers
-        </h4>
+<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
 </div>
 <ul class="other-paper-list">
 <li>
@@ -351,22 +318,18 @@
 <a href="https://arxiv.org/abs/2608.30629" rel="noopener noreferrer" target="_blank">Gate-Efficient Implementation of Query-Optimal Time-Dependent Simulation</a>
 </h4>
 <p class="other-paper-authors">Boyang Chen, Minbo Gao, Zhengfeng Ji, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Shuo Zhou.</p>
-<p class="other-paper-note">
-          An exact dyadic factorization yields a gate-efficient implementation of our query-optimal time-dependent Hamiltonian simulation algorithm.
-         </p>
+<p class="other-paper-note"><span data-language="en" lang="en">An exact dyadic factorization yields a gate-efficient implementation of our query-optimal time-dependent Hamiltonian simulation algorithm.</span><span data-language="zh" lang="zh-CN">通过精确的二进分解，为我们的查询最优含时哈密顿量模拟算法给出量子门高效的实现。</span></p>
 </li>
 <li>
 <h4 class="other-paper-title"><a href="https://arxiv.org/abs/2504.02385" rel="noopener noreferrer" target="_blank">Quantum Singular Value Transformation without Block Encodings</a></h4>
 <p class="other-paper-authors">Shantanav Chakraborty, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yuxin Zhang.</p>
-<p class="other-paper-note">Also listed under <a href="#qsvt-product-formulas">Product-Formula Methods</a>. Its one-ancilla implementation has near-optimal, commutator-sensitive gate complexity.</p>
+<p class="other-paper-note"><span data-language="en" lang="en">Also listed under <a href="#qsvt-product-formulas">Product-Formula Methods</a>. Its one-ancilla implementation has near-optimal, commutator-sensitive gate complexity.</span><span data-language="zh" lang="zh-CN">亦列于<a href="#qsvt-product-formulas">乘积公式方法</a>。该方法仅需一个辅助量子比特，并具有近最优且依赖于对易子的量子门复杂度。</span></p>
 </li><li>
 <h4 class="other-paper-title">
 <a href="https://arxiv.org/abs/2510.06851" rel="noopener noreferrer" target="_blank">Randomized Quantum Singular Value Transformation</a>
 </h4>
 <p class="other-paper-authors">Xinzhao Wang<sup class="order-mark">*</sup>, Yuxin Zhang<sup class="order-mark">*</sup>, Soumyabrata Hazra, Tongyang Li, Changpeng Shao, and Shantanav Chakraborty.</p>
-<p class="other-paper-note">
-          Randomized QSVT via importance sampling and qDRIFT replaces explicit block encodings with sampled Hamiltonian evolutions. Its gate complexity is independent of the number of terms and quadratic in the polynomial degree.
-         </p>
+<p class="other-paper-note"><span data-language="en" lang="en">Randomized QSVT via importance sampling and qDRIFT replaces explicit block encodings with sampled Hamiltonian evolutions. Its gate complexity is independent of the number of terms and quadratic in the polynomial degree.</span><span data-language="zh" lang="zh-CN">通过重要性采样和 qDRIFT，随机化 QSVT 用采样的哈密顿量演化替代显式块编码。量子门复杂度与哈密顿量项数无关，并以二次方式依赖于多项式次数。</span></p>
 </li>
 </ul>
 </div>
@@ -375,10 +338,8 @@
 <article aria-labelledby="theme-learning" class="research-group" id="learning">
 <div class="group-head">
 <div>
-<h3 id="theme-learning">
-         Online Learning and Equilibrium Computation
-        </h3>
-<p>I study multiplicative-weights update (MWU) and related mirror-descent methods in matrix online learning, adaptive learning of quantum states, and quantum algorithms for correlated equilibria in general-sum games.</p>
+<h3 id="theme-learning"><span data-language="en" lang="en">Online Learning and Equilibrium Computation</span><span data-language="zh" lang="zh-CN">在线学习与均衡计算</span></h3>
+<p><span data-language="en" lang="en">I study multiplicative-weights update (MWU) and related mirror-descent methods in matrix online learning, adaptive learning of quantum states, and quantum algorithms for correlated equilibria in general-sum games.</span><span data-language="zh" lang="zh-CN">我研究矩阵在线学习中的乘法权重更新（MWU）及相关镜像下降方法、量子态的自适应学习，以及一般和博弈中相关均衡的量子算法。</span></p>
 </div>
 </div>
 <div class="featured">
@@ -389,13 +350,11 @@
 </h4>
 </div>
 <p class="feature-authors">Weiyuan Gong, Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Zhiyu Zhang.</p>
-<p>
-         We obtain instance-optimal regret for matrix learning from expert advice at the computational cost of standard matrix multiplicative weights. The main technical ingredient is a one-sided Jensen trace inequality for a class of potential functions.
-        </p>
+<p><span data-language="en" lang="en">We obtain instance-optimal regret for matrix learning from expert advice at the computational cost of standard matrix multiplicative weights. The main technical ingredient is a one-sided Jensen trace inequality for a class of potential functions.</span><span data-language="zh" lang="zh-CN">我们在保持标准矩阵乘法权重更新计算成本的同时，为矩阵专家建议学习给出了实例最优的遗憾界。核心技术是一类势函数的单侧 Jensen 迹不等式。</span></p>
 </div>
 <figure class="selected-result" aria-label="One-sided Jensen trace inequality for Laplace-mixture potentials">
   <div class="result-excerpt-body">
-    <p class="result-note result-lead">If a twice-differentiable potential \(\Phi\) satisfies \(\Phi''(x)=\int_{\mathbb R}\mu(t)e^{-tx}\,\mathrm dt\) for all real \(x\) and some nonnegative \(\mu\), then any Hermitian matrices \(S,G\) with \(\|G\|_{\mathrm{op}}\le1\) satisfy the one-sided Jensen trace inequality</p>
+    <p class="result-note result-lead"><span data-language="en" lang="en">If a twice-differentiable potential \(\Phi\) satisfies \(\Phi''(x)=\int_{\mathbb R}\mu(t)e^{-tx}\,\mathrm dt\) for all real \(x\) and some nonnegative \(\mu\), then any Hermitian matrices \(S,G\) with \(\|G\|_{\mathrm{op}}\le1\) satisfy the one-sided Jensen trace inequality</span><span data-language="zh" lang="zh-CN">若二阶可微势函数 \(\Phi\) 对任意实数 \(x\) 满足 \(\Phi''(x)=\int_{\mathbb R}\mu(t)e^{-tx}\,\mathrm dt\)，其中 \(\mu\) 非负，则对任意满足 \(\|G\|_{\mathrm{op}}\le1\) 的 Hermitian 矩阵 \(S,G\)，有如下单侧 Jensen 迹不等式</span></p>
     <div class="math-display" aria-label="One-sided Jensen trace inequality">
       \[
       \operatorname{Tr}\Phi(S+G)
@@ -407,9 +366,7 @@
 </div>
 <div aria-label="Other papers in this research area" class="papers-in-area">
 <div class="papers-in-area-heading">
-<h4>
-         Other papers
-        </h4>
+<h4><span data-language="en" lang="en">Other papers</span><span data-language="zh" lang="zh-CN">其他论文</span></h4>
 </div>
 <ul class="other-paper-list">
 <li>
@@ -417,9 +374,7 @@
 <a href="https://arxiv.org/abs/2510.16782" rel="noopener noreferrer" target="_blank">Near-Optimal Quantum Algorithms for Computing (Coarse) Correlated Equilibria of General-Sum Games</a>
 </h4>
 <p class="other-paper-authors">Tongyang Li, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Yexin Zhang.</p>
-<p class="other-paper-note">
-          Quantum algorithms based on multiplicative weights yield near-optimal query complexity for correlated and coarse correlated equilibria.
-         </p>
+<p class="other-paper-note"><span data-language="en" lang="en">Quantum algorithms based on multiplicative weights yield near-optimal query complexity for correlated and coarse correlated equilibria.</span><span data-language="zh" lang="zh-CN">基于乘法权重更新，给出一般和博弈中相关均衡与粗相关均衡的近最优查询复杂度量子算法。</span></p>
 <div class="other-paper-meta">
 <span class="related-venue">
            NeurIPS 2025
@@ -431,9 +386,7 @@
 <a href="https://doi.org/10.22331/q-2024-09-12-1471" rel="noopener noreferrer" target="_blank">Adaptive Online Learning of Quantum States</a>
 </h4>
 <p class="other-paper-authors">Xinyi Chen, Elad Hazan, Tongyang Li, Zhou Lu, Xinzhao Wang<sup aria-label="Alphabetical author order" class="order-mark">†</sup>, and Rui Yang.</p>
-<p class="other-paper-note">
-          Adaptive and dynamic regret bounds for online learning of quantum states.
-         </p>
+<p class="other-paper-note"><span data-language="en" lang="en">Adaptive and dynamic regret bounds for online learning of quantum states.</span><span data-language="zh" lang="zh-CN">给出量子态在线学习的自适应与动态遗憾界。</span></p>
 <div class="other-paper-meta">
 <span class="related-venue">
            Quantum 2024
@@ -451,14 +404,10 @@
 <section aria-labelledby="publications-title" class="section section-pubs" id="publications">
 <div class="container">
 <div class="section-heading">
-<h2 id="publications-title">
-       Publications
-      </h2>
+<h2 id="publications-title"><span data-language="en" lang="en">Publications</span><span data-language="zh" lang="zh-CN">论文发表</span></h2>
 </div>
-<p class="author-note"><sup class="order-mark">†</sup> Alphabetical author order. <sup class="order-mark">*</sup> Equal contribution.</p>
-<h3 class="pub-group-heading">
-      Published or accepted
-     </h3>
+<p class="author-note"><span data-language="en" lang="en"><sup class="order-mark">†</sup> Alphabetical author order. <sup class="order-mark">*</sup> Equal contribution.</span><span data-language="zh" lang="zh-CN"><sup class="order-mark">†</sup> 作者按字母顺序排列。<sup class="order-mark">*</sup> 同等贡献。</span></p>
+<h3 class="pub-group-heading"><span data-language="en" lang="en">Published or accepted</span><span data-language="zh" lang="zh-CN">已发表或已接收</span></h3>
 <ol class="publication-list">
 <li class="publication">
 <span class="pub-year">
@@ -548,10 +497,10 @@
 <details class="pub-details" open="">
 <summary>
 <span>
-        Preprints
+        <span data-language="en" lang="en">Preprints</span><span data-language="zh" lang="zh-CN">预印本</span>
        </span>
 <span class="details-meta">
-        12 papers
+        <span data-preprint-count>12 papers</span>
         <span aria-hidden="true" class="details-chevron">
          ⌄
         </span>
@@ -699,7 +648,7 @@
 <p class="authors"><span class="crossover-lead"> Jinzhao Sun<sup class="order-mark">*</sup>, Bozhen Zhou<sup class="order-mark">*</sup>, Jue Xu<sup class="order-mark">*</sup>, et al. (31 authors) </span></p>
 <details class="author-details">
 <summary>
-           Show full author list
+           <span data-language="en" lang="en">Show full author list</span><span data-language="zh" lang="zh-CN">完整作者名单</span>
           </summary>
 <p>
            Jinzhao Sun*, Bozhen Zhou*, Jue Xu*, Yuan Yao*, Zhenyu Du*, Zixu Zhang*, Yuntian Gu*, Junxiang Huang, Shuo Zhou, Ziruo Wang, Alexander Yosifov, Wenzheng Dong, Yiming Huang, Daniel Serrano,
@@ -722,14 +671,12 @@
 <section aria-labelledby="talks-title" class="section section-talks" id="talks">
 <div class="container">
 <div class="section-heading">
-<h2 id="talks-title">
-       Selected talks
-      </h2>
+<h2 id="talks-title"><span data-language="en" lang="en">Selected talks</span><span data-language="zh" lang="zh-CN">部分报告</span></h2>
 </div>
 <ol class="talk-list">
 <li>
 <time datetime="2026-07-09">
-        July 2026
+        <span data-language="en" lang="en">July 2026</span><span data-language="zh" lang="zh-CN">2026 年 7 月</span>
        </time>
 <div>
 <p class="talk-title">
@@ -742,7 +689,7 @@
 </li>
 <li>
 <time datetime="2026-04-29">
-        April 2026
+        <span data-language="en" lang="en">April 2026</span><span data-language="zh" lang="zh-CN">2026 年 4 月</span>
        </time>
 <div>
 <p class="talk-title">
@@ -755,7 +702,7 @@
 </li>
 <li>
 <time datetime="2026-04-22">
-        April 2026
+        <span data-language="en" lang="en">April 2026</span><span data-language="zh" lang="zh-CN">2026 年 4 月</span>
        </time>
 <div>
 <p class="talk-title">
@@ -777,14 +724,14 @@
      <span id="year">
       2026
      </span>
-     Xinzhao Wang · Updated October 2026
+     <span data-language="en" lang="en">Xinzhao Wang · Updated October 2026</span><span data-language="zh" lang="zh-CN">王昕兆 · 2026 年 10 月更新</span>
     </span>
 <span>
-<a href="mailto:wangxz@stu.pku.edu.cn">Email</a>
+<a href="mailto:wangxz@stu.pku.edu.cn"><span data-language="en" lang="en">Email</span><span data-language="zh" lang="zh-CN">邮箱</span></a>
      ·
-     <a href="Xinzhao_Wang_CV.pdf">CV</a>
+     <a href="Xinzhao_Wang_CV.pdf"><span data-language="en" lang="en">CV</span><span data-language="zh" lang="zh-CN">简历</span></a>
      ·
-     <a href="#top">Back to top</a>
+     <a href="#top"><span data-language="en" lang="en">Back to top</span><span data-language="zh" lang="zh-CN">返回顶部</span></a>
 </span>
 </div>
 </footer>
