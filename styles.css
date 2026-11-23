@@ -247,6 +247,8 @@ html[lang="zh-CN"] .ai-disclosure > p { line-height: 1.75; }
 .talk-list time { padding-top: 3px; color: var(--faint); font-family: var(--font-sans); font-size: 12.5px; }
 .talk-title { color: var(--ink); font-size: 17px; line-height: 1.45; }
 .talk-venue { margin-top: 5px; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+.talk-venue a { color: inherit; text-decoration-color: var(--line-strong); }
+.talk-venue a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 22px 28px; color: var(--faint); font-family: var(--font-sans); font-size: 12px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .footer-inner a { color: var(--muted); text-decoration: none; }
